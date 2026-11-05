@@ -1,0 +1,16 @@
+# Referências locais de pesquisa, fora do projeto entregue.
+/INVENTARIO-PLUGINS-WEB.txt
+/REFERENCIAS-SITES.md
+/site-atual.html
+
+# Dependências, arquivos locais e credenciais.
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+.openai/local/
+
+# dist/ contém o código-fonte estático deste projeto e deve ser versionado.

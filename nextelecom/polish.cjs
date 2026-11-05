@@ -1,0 +1,1 @@
+const fs=require('node:fs'),p=__dirname+'/dist/app.js';let s=fs.readFileSync(p,'utf8');s=s.replace("document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));","document.querySelectorAll('.reveal').forEach(el=>{el.style.animationPlayState='paused';observer.observe(el)});");fs.writeFileSync(p,s);
