@@ -13,6 +13,12 @@ npm start
 
 Abra http://127.0.0.1:4173 no navegador.
 
+## Entrega para homologação
+
+O site pode ser servido como arquivos estáticos na infraestrutura da Nex. Gere o pacote com `python nextelecom/prepare_staging.py` na raiz do repositório. O ZIP sai em `release-output/nextelecom-homologacao.zip`. A equipe de infraestrutura pode publicar o conteúdo de `site/` na raiz de um endereço de teste com HTTPS.
+
+Os detalhes de instalação, atualização e conferência estão em [HOMOLOGACAO.md](nextelecom/HOMOLOGACAO.md).
+
 ## Testes
 
 ```sh

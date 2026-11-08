@@ -2,6 +2,7 @@
 /INVENTARIO-PLUGINS-WEB.txt
 /REFERENCIAS-SITES.md
 /site-atual.html
+/release-output/
 
 # Dependências, arquivos locais e credenciais.
 node_modules/
