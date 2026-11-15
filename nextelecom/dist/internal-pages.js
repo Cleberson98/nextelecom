@@ -4,9 +4,7 @@ const PAGE_ART={
  '/movel':{theme:'mobile',image:'campaign-mobile.jpg',alt:'Celular e chip ilustrativos, sem indicação de modelo comercial',label:'Minha NEX Móvel',icon:'phone',caption:'Internet em casa + chip. Tudo no mesmo combo.'},
  '/cam':{theme:'camera',image:'campaign-camera.jpg',alt:'Câmera de segurança ilustrativa em um ambiente residencial',label:'NEX CAM',icon:'camera',caption:'Soluções para sua casa e seu negócio.'},
  '/empresarial':{theme:'business',image:'campaign-business.jpg',alt:'Cena ilustrativa de profissionais trabalhando em um escritório',label:'Empresarial',icon:'business',caption:'Conexões para o próximo passo do seu negócio.'},
- '/quem-somos':{theme:'about',image:'campaign-family.jpg',alt:'Família em uma cena ilustrativa de conexão e convivência',label:'Quem somos',icon:'wifi',caption:'Conexões que aproximam histórias.'},
  '/indique':{theme:'referral',image:'campaign-hero.jpg',alt:'Cena ilustrativa de uma pessoa usando o celular',label:'Indique e Ganhe',icon:'phone',caption:'Conheça as regras da campanha com a Nex.'},
- '/contato':{theme:'contact',image:'campaign-business.jpg',alt:'Cena ilustrativa de pessoas conversando em um escritório',label:'Fale conosco',icon:'business',caption:'Escolha seu atendimento. Conte com a Nex.'},
  '/svas':{theme:'services',image:'campaign-family.jpg',alt:'Cena ilustrativa de uma família usando um notebook',label:'Apps e serviços',icon:'wifi',caption:'Novas possibilidades para a sua rotina.'}
 };
 function hero({eyebrow,title,copy,cta='Encontre seu plano',url='#planos'}){

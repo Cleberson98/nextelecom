@@ -18,9 +18,129 @@ function steps(items){return `<div class="steps">${items.map((x,i)=>`<article cl
 function cameras(){return hero({sub:true,eyebrow:'NEX CAM · SEGURANÇA COM CÂMERAS',title:'Perto do que<br><em>importa.</em>',copy:'Da sua casa ao seu negócio. Conheça as soluções NEX CAM e escolha o pacote que faz sentido para você.',cta:'Ver soluções',art:'<div class="orb two"></div><div class="camera-art" aria-hidden="true"><b>◉</b></div><div class="float-tag tag-b">NEX CAM &nbsp; • &nbsp; Sua tranquilidade</div>'})+`<section class="section soft" id="planos"><div class="wrap">${sectionHead('UM NOVO OLHAR PARA SUA SEGURANÇA','O cuidado certo para cada espaço.','Compare a quantidade de câmeras, retenção e valores. Mensalidade e instalação aparecem separadas.')}<div class="plan-grid cam-grid">${CATALOG.cameras.map(p=>`<article class="plan-card reveal"><span class="plan-name">${p.profile}</span><h3 style="margin-top:20px">${p.name}</h3><div class="speed">${p.count||'Sob'}<span>${p.count?(p.count===1?'câmera':'câmeras'):'medida'}</span></div><ul><li>${p.days?p.days+' dias de retenção':'Quantidade definida no projeto'}</li><li>${p.count?'Avaliação das condições do local':'Retenção e recursos sob consulta'}</li></ul><div class="plan-price">${p.price===null?'<span style="font-size:25px">Sob avaliação</span>':price(p.price)}</div><p class="helper" style="margin-bottom:20px">${p.setup===null?'Instalação sob avaliação técnica':`Instalação do pacote: ${money(p.setup)}*`}</p><button class="button blue" data-add="${p.id}">${p.price===null?'Solicitar projeto':'Adicionar ao combo'} ↗</button></article>`).join('')}</div><p class="disclaimer">*A instalação é cobrada uma única vez pelo pacote, separadamente da mensalidade. Equipamentos, local de armazenamento, manutenção, acesso remoto e condições técnicas aguardam confirmação. Não inclui promessa de vigilância humana.</p></div></section><section class="section"><div class="wrap">${sectionHead('DO PLANO À INSTALAÇÃO','Cada etapa, com você.')}${steps([['Escolha sua solução','Compare os pacotes ou solicite uma solução personalizada.'],['Confirme o projeto','O atendimento verifica as condições do local, equipamentos e orçamento.'],['Instale e comece a usar','Agende a instalação e receba as orientações de uso conforme a solução contratada.']])}</div></section>`+faq([['A instalação está incluída na mensalidade?','Não. A instalação é cobrada uma única vez pelo pacote, separadamente da mensalidade. No NEX CAM Essencial, a instalação das duas câmeras custa R$ 219,90 no total.'],['Onde as imagens ficam armazenadas?','A tabela informa os dias de retenção, mas não especifica o local de armazenamento. Consulte a Nex sobre a solução aplicável.'],['A NEX CAM inclui monitoramento humano?','Não há confirmação desse serviço nos materiais fornecidos. O escopo técnico e os recursos de cada pacote serão confirmados pelo atendimento.'],['Meu projeto precisa de mais câmeras?','Selecione NEX CAM Personalizada. O resumo mostrará o item sob avaliação, sem tratá-lo como gratuito.']])+band()}
 function svas(){return hero({sub:true,eyebrow:'APPS E SERVIÇOS NEX',title:'Sua conexão.<br><em>Mais possibilidades.</em>',copy:'Entretenimento, leitura e serviços digitais para completar sua rotina. Conheça as faixas do catálogo e tire suas dúvidas.',cta:'Explorar serviços',art:'<div class="orb two"></div><div class="large-symbol" aria-hidden="true">play.</div><div class="float-tag tag-b">Leitura &nbsp; • &nbsp; Entretenimento &nbsp; • &nbsp; Bem-estar</div>'})+`<section class="section soft" id="planos"><div class="wrap">${sectionHead('ESCOLHA O QUE COMBINA COM VOCÊ','Mais do que estar online.','As faixas abaixo vieram do briefing. O catálogo de serviços de cada faixa precisa de validação.')}<div class="cards-three">${CATALOG.svas.map(p=>`<article><span class="eyebrow">ADICIONAIS · CATÁLOGO EM REVISÃO</span><h3>${money(p.price)} <small>/mês</small></h3><p>Registre interesse nesta faixa. O serviço e a elegibilidade serão confirmados pela Nex antes da contratação.</p><button class="button blue" data-add="${p.id}">Registrar interesse ↗</button></article>`).join('')}</div><h2 style="margin-top:65px;font-size:32px">Já tem um serviço? Saiba como acessar.</h2><div class="app-strip">${['TV Plus','Ubook','Kindle Pass','Disney+','HBO Max'].map(x=>`<button class="app-tile" data-tutorial="${x}">${x}<small style="font-size:10px;display:block;margin-top:12px">Como acessar ↗</small></button>`).join('')}</div><p class="helper">Os vídeos e os passos escritos serão vinculados individualmente após o envio dos materiais oficiais pela Nex. Serviços já incluídos no plano não são cobrados novamente.</p></div></section>`+faq([['Os apps estão incluídos em todos os planos?','Cada oferta tem seu próprio catálogo e benefícios. Os serviços incluídos aparecem nos detalhes do plano. A composição final será validada pela Nex.'],['Onde encontro os vídeos de acesso?','Use o botão Como acessar no serviço desejado. Nesta versão, os vídeos aguardam fornecimento pela Nex; nenhum vídeo de outro serviço é exibido como substituto.'],['Posso adicionar um serviço que já está incluído?','Serviços incluídos não geram cobrança adicional. As faixas de interesse desta revisão ainda dependem da definição do catálogo por serviço.']])+band()}
 function business(){return hero({sub:true,eyebrow:'NEX EMPRESARIAL',title:'Seu negócio<br>merece ir <em>além.</em>',copy:'Conectividade e soluções para acompanhar a sua operação. Converse com a Nex sobre o que sua empresa precisa.',cta:'Conheça as soluções',art:'<div class="orb two"></div><div class="large-symbol" aria-hidden="true">↗</div><div class="float-tag tag-b">Conexão para novos negócios.</div>'})+`<section class="section soft" id="planos"><div class="wrap">${sectionHead('CONEXÕES QUE GERAM POSSIBILIDADES','Cada negócio tem seu próximo passo.')}<div class="cards-three">${[['Internet empresarial','Conheça as opções de conexão para a rotina da sua empresa.','Conectividade empresarial'],['Link dedicado','Solicite uma avaliação das necessidades de banda, disponibilidade e operação. Especificações e SLA sob consulta.','Link dedicado'],['Segurança com NEX CAM','Compare os pacotes de câmeras para comércio e empresas.','NEX CAM empresarial']].map(x=>`<article><h3>${x[0]}</h3><p>${x[1]}</p><button class="text-link" data-business="${x[2]}">Falar com um especialista ↗</button></article>`).join('')}</div></div></section>`+promos()+band()}
-function about(){return hero({sub:true,eyebrow:'SOMOS A NEX TELECOM',title:'Conectamos pessoas.<br><em>Abrimos caminhos.</em>',copy:'Uma conexão aproxima histórias, oportunidades e novos futuros. Conheça o que orienta a Nex Telecom.',cta:'Conheça nossa essência',url:'#essencia',art:homeArt})+`<section class="section" id="essencia"><div class="wrap content-copy"><span class="eyebrow">NOSSA ESSÊNCIA</span><h2>Missão</h2><p>Prestar serviços de Telecomunicações destinados a atender às necessidades dos nossos clientes em toda região onde estamos localizados, com qualidade e confiabilidade.</p><h2>Visão</h2><p>Ser a empresa de telecom líder em tecnologia, reconhecida nacionalmente por inovação e solidez, destacando-se pela velocidade de nossos pacotes, tecnologia avançada e atendimento.</p><h2>Valores</h2><div class="values">${['Ambição','Dedicação','Ética','Humildade','Inovação','Respeito','Solidez'].map(x=>`<span>${x}</span>`).join('')}</div><p class="helper">Missão e visão reaproveitadas do site atual, sujeitas à validação. Novas fotografias da fachada e dos colaboradores aguardam os arquivos originais.</p></div></section>`+band()}
+function about() {
+  const values = ['Ambição', 'Dedicação', 'Ética', 'Humildade', 'Inovação', 'Respeito', 'Solidez'];
+
+  return `
+    <section class="section about-intro" aria-labelledby="about-title">
+      <div class="wrap about-intro-grid">
+        <div>
+          <span class="eyebrow">NEX TELECOM</span>
+          <h1 id="about-title">Quem somos</h1>
+          <p>A Nex Telecom conecta pessoas e empresas com internet de fibra, telefonia móvel e soluções de câmeras.</p>
+          <p>Nosso propósito é ampliar o acesso à tecnologia e aproximar as pessoas nas comunidades onde atuamos.</p>
+            ${link('/contato#lojas', 'Conheça nossas lojas', 'button light')}
+        </div>
+        <figure class="about-photo">
+          <img src="/assets/fachadas-equipe.jpg" width="1500" height="800"
+            alt="Fachadas de lojas da Nex Telecom e colaboradores trabalhando no atendimento." fetchpriority="high">
+          <figcaption>Nossas lojas e equipe de atendimento</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="section soft" aria-labelledby="about-pillars">
+      <div class="wrap">
+        <div class="section-head"><h2 id="about-pillars">Missão, visão e valores</h2></div>
+        <div class="about-pillars">
+          <article>
+            <h3>Missão</h3>
+            <p>Oferecer serviços de telecomunicações com qualidade e confiabilidade, atendendo às necessidades dos clientes nas regiões em que atuamos.</p>
+          </article>
+          <article>
+            <h3>Visão</h3>
+            <p>Ser reconhecida nacionalmente pela liderança em tecnologia, pela inovação, pela solidez e pela qualidade do atendimento.</p>
+          </article>
+          <article>
+            <h3>Valores</h3>
+            <ul class="about-values">${values.map(value => `<li>${value}</li>`).join('')}</ul>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="about-contact">
+      <div class="wrap about-contact">
+        <h2 id="about-contact">Entre em contato com a Nex</h2>
+        <div>
+          ${link('/contato', 'Fale conosco', 'button blue')}
+          <a class="text-link" href="https://nextelecom.com.br/trabalheconosco/" target="_blank" rel="noopener">Trabalhe conosco ↗</a>
+        </div>
+      </div>
+    </section>`;
+}
 function referral(){return hero({sub:true,eyebrow:'INDIQUE E GANHE',title:'Conexão boa<br>a gente <em>compartilha.</em>',copy:'Quer indicar a Nex para alguém? Consulte as regras e os benefícios vigentes com nosso atendimento.',cta:'Como participar',url:'#participar',art:'<div class="orb two"></div><div class="large-symbol" aria-hidden="true">+1</div>'})+`<section class="section" id="participar"><div class="wrap">${sectionHead('COMPARTILHE POSSIBILIDADES','Seu próximo convite começa aqui.')}${steps([['Conheça as regras','Converse com a Nex sobre elegibilidade e benefícios vigentes.'],['Saiba como indicar','O atendimento orienta a forma oficial de participação.'],['Acompanhe com a Nex','Confirme a validação e as condições do benefício da campanha.']])}<p class="notice">Os valores, benefícios e critérios da campanha ainda não foram fornecidos. Consulte as regras antes de compartilhar dados de terceiros.</p><button class="button blue" data-business="Indique e Ganhe">Consultar campanha ↗</button></div></section>`+band()}
-function contact(){return hero({sub:true,eyebrow:'FALE COM A NEX',title:'A gente está<br><em>por perto.</em>',copy:'Contrate, tire dúvidas ou encontre o caminho para o seu atendimento.',cta:'Escolha seu atendimento',url:'#canais',art:'<div class="orb two"></div><div class="large-symbol" aria-hidden="true">olá.</div>'})+`<section class="section" id="canais"><div class="wrap cards-three"><article><h3>Quero ser Nex</h3><p>Conheça planos, monte seu combo e confirme a cobertura no seu bairro.</p><button class="button" data-combo>Montar meu combo ↗</button></article><article><h3>Já sou cliente</h3><p>Resolva dúvidas sobre seus serviços ou acesse a área do assinante.</p><button class="text-link" data-business="Suporte ao cliente">Falar com atendimento ↗</button><br>${link('https://central.nextelecom.net.br/','Acessar Minha Nex','text-link')}</article><article><h3>Telefone e lojas</h3><p>Fale pelo número divulgado no site atual. Consulte endereços e horários diretamente com a Nex.</p>${link('tel:+557132526676','(71) 3252-6676','text-link')}<br>${link('https://nextelecom.com.br/faleconosco/','Consultar lojas no site atual','text-link')}</article></div></section>`+faq(commonFaq)}
+function contact() {
+  const whatsapp = 'https://wa.me/557132526676';
+  const customerArea = 'https://central.nextelecom.net.br/';
+  const maps = 'https://www.google.com/maps/search/?api=1&query=';
+  const stores = [
+    {number: '01', address: 'Rua Professor Plínio Garcez de Sena, 51', district: 'Mussurunga I', city: 'Salvador, BA', cep: '41490-340'},
+    {number: '02', address: 'Rua Doutor Maurício, 131–173', city: 'Lauro de Freitas, BA'},
+    {number: '03', address: 'Avenida Fortaleza, quadra 1, lote 19', district: 'Itinga', city: 'Lauro de Freitas, BA', cep: '42738-595'},
+    {number: '04', address: 'Rua Manoel Silvestre Leite, 228', district: 'Centro', city: 'Lauro de Freitas, BA', cep: '42703-050', location: 'https://maps.app.goo.gl/WwXYG7Q3NKgwxz65A'},
+    {number: '05', address: 'Largo do Soledade, 18', district: 'Lapinha', city: 'Salvador, BA', cep: '40325-090'},
+    {number: '06', address: 'Avenida Aliomar Baleeiro, 14703', district: 'São Cristóvão', city: 'Salvador, BA'}
+  ];
+
+  return `
+    <section class="section contact-intro" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h1 id="contact-title">Fale conosco</h1>
+        <p>Fale com a Nex sobre seu plano, peça suporte ou encontre uma loja.</p>
+        <div class="contact-actions">
+          <a class="button light" href="${whatsapp}" target="_blank" rel="noopener">Abrir WhatsApp ↗</a>
+          ${link('tel:+557132526676', 'Ligar para (71) 3252-6676', 'contact-phone')}
+        </div>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="contact-channels">
+      <div class="wrap">
+        <div class="section-head"><h2 id="contact-channels">Como podemos ajudar?</h2></div>
+        <div class="cards-three">
+          <article>
+            <h3>Planos e cobertura</h3>
+            <p>Compare os planos e personalize seu combo. A Nex confirma a disponibilidade no seu endereço.</p>
+            <button class="button blue" data-combo>Montar meu combo ↗</button>
+          </article>
+          <article>
+            <h3>Suporte técnico</h3>
+            <p>Peça ajuda com sua conexão ou com um serviço contratado.</p>
+            <a class="button blue" href="${whatsapp}?text=${encodeURIComponent('Olá, Nex! Preciso de suporte técnico.')}" target="_blank" rel="noopener">Pedir suporte no WhatsApp ↗</a>
+          </article>
+          <article>
+            <h3>Faturas e serviços</h3>
+            <p>Acesse a Área do Cliente para consultar suas faturas e emitir a segunda via.</p>
+            <a class="button blue" href="${customerArea}" target="_blank" rel="noopener">Acessar Área do Cliente ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section soft" id="lojas" aria-labelledby="contact-stores">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="contact-stores">Nossas lojas</h2>
+          <p>Confirme o horário de atendimento com a Nex antes de visitar.</p>
+        </div>
+        <ul class="contact-stores">
+          ${stores.map(({number, address, district, city, cep, location}) => {
+            const name = `Loja ${number}`;
+            const locality = district ? `${district} · ${city}` : city;
+            const mapUrl = location || maps + encodeURIComponent([address, district, city, cep].filter(Boolean).join(', '));
+            return `<li>
+              <div class="contact-store-photo">
+                <img src="/assets/nex-loja-${number}.png" alt="Fachada da ${name} da Nex Telecom"
+                  width="500" height="500" loading="lazy" decoding="async">
+              </div>
+              <div class="contact-store-details">
+                <h3>${name}</h3>
+                <p>${address}<br>${locality}${cep ? `<br>CEP ${cep}` : ''}</p>
+                <a class="text-link" href="${mapUrl}" target="_blank" rel="noopener" aria-label="Ver ${name} no mapa">Ver no mapa ↗</a>
+              </div>
+            </li>`;
+          }).join('')}
+        </ul>
+      </div>
+    </section>`;
+}
 const pages={'/':home,'/internet':()=>hero({sub:true,eyebrow:'INTERNET FIBRA NEX',title:'Mais velocidade.<br>Mais <em>você.</em>',copy:'Encontre uma conexão para tudo o que faz parte da sua vida. Compare os planos e personalize seu combo.'})+`<section class="section soft" id="planos"><div class="wrap">${sectionHead('NEX FIBRA','Seu próximo plano está aqui.')}${internetCards()}</div></section>`+appsSection()+faq(commonFaq)+band(),'/movel':mobile,'/cam':cameras,'/svas':svas,'/empresarial':business,'/quem-somos':about,'/indique':referral,'/contato':contact};
 const titles={'/':'Conecte seu mundo','/internet':'Internet fibra','/movel':'Minha NEX Móvel','/cam':'NEX CAM','/svas':'Apps e serviços','/empresarial':'Empresarial','/quem-somos':'Quem somos','/indique':'Indique e ganhe','/contato':'Fale conosco'};
 function render(){const path=location.pathname.replace(/\/$/,'')||'/';observer.disconnect();document.body.classList.toggle('home-page',path==='/');$('#main').innerHTML=pages[path]?pages[path]():`<section class="section"><div class="wrap"><h1>Página não encontrada.</h1><p>Vamos encontrar uma nova conexão?</p>${link('/','Voltar ao início')}</div></section>`;document.title=`${titles[path]||'Página não encontrada'} · Nex Telecom`;document.querySelectorAll('nav a').forEach(a=>{a.removeAttribute('aria-current');if(a.getAttribute('href')===path)a.setAttribute('aria-current','page')});$('nav').classList.remove('open');$('.menu-toggle').setAttribute('aria-expanded','false');document.querySelectorAll('.reveal').forEach(el=>{el.style.animationPlayState='paused';observer.observe(el)});document.dispatchEvent(new Event('nex:render'));}
@@ -29,11 +149,132 @@ function persist(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch{toa
 function toast(text){$('#toast').textContent=text;$('#toast').classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('#toast').classList.remove('show'),3000)}
 function updateCart(){const c=calculate(state);$('#cart-count').textContent=(c.base?1:0)+(c.camera?1:0)+c.svas.length;$('#cart-total').textContent=(c.partial?'Parcial ':'')+money(c.monthly)}
 function add(id){if(allBase.some(x=>x.id===id)){const replaced=!!state.base&&state.base!==id;state.base=id;toast(replaced?'Oferta principal atualizada. A anterior foi substituída.':'Oferta adicionada ao seu combo.')}else if(CATALOG.cameras.some(x=>x.id===id)){state.camera=id;toast('Solução NEX CAM adicionada.')}else if(CATALOG.svas.some(x=>x.id===id)){if(!state.svas.includes(id))state.svas.push(id);toast('Interesse registrado. Catálogo sujeito à confirmação.')}persist();openCombo()}
-function comboLines(c){return [c.base&&{id:c.base.id,name:c.base.name,description:`${c.base.speed} Mega${c.base.data?' + '+c.base.data+' · '+c.base.lines+' linha(s)':''}`,price:c.base.price},c.camera&&{id:c.camera.id,name:c.camera.name,description:c.camera.count?`${c.camera.count} câmera(s) · ${c.camera.days} dias de retenção`:'Sob avaliação técnica',price:c.camera.price},...c.svas.map(x=>({...x,description:'Interesse · catálogo pendente de validação'}))].filter(Boolean)}
-function openCombo(){const c=calculate(state);$('#combo-content').innerHTML=`${comboLines(c).map(x=>`<div class="combo-line"><div><strong>${x.name}</strong><small>${x.description}</small><button class="remove" data-remove="${x.id}">Remover</button></div><b>${x.price===null?'Sob consulta':money(x.price)}</b></div>`).join('')||'<p>Comece escolhendo as possibilidades que combinam com você.</p>'}<div class="combo-links"><a href="/internet">+ Internet</a><a href="/movel">+ Fibra e chip</a><a href="/cam">+ Câmeras</a><a href="/svas">+ Apps e serviços</a></div><div class="totals"><div><span>Internet / fibra + chip</span><b>${money(c.base?.price||0)}</b></div><div><span>NEX CAM</span><b>${c.camera?.price===null?'Sob consulta':money(c.camera?.price||0)}</b></div><div><span>Faixas de apps · estimativa</span><b>${money(c.svas.reduce((n,x)=>n+x.price,0))}</b></div><div><span>Descontos aplicados</span><b>${money(0)}</b></div><div class="grand-total"><span>${c.partial?'Total mensal parcial':'Total mensal'}</span><strong>${money(c.monthly)}</strong></div><div><span>Instalação do pacote*</span><b>${c.camera?.setup===null?'Sob avaliação':money(c.setup)}</b></div></div>${c.base?'<p class="helper">'+(c.base.included?'Incluídos sem cobrança adicional: '+c.base.included.join(', ')+'.':'A oferta de internet + chip substitui um plano de internet anterior.')+'</p>':''}${c.camera?'<p class="helper">*Instalação cobrada uma única vez pelo pacote de câmeras. Recursos e equipamentos sujeitos à avaliação.</p>':''}${c.base?'<p class="helper">Instalação da fibra e custos de ativação/entrega do chip, quando aplicáveis, serão confirmados no atendimento. Não estão definidos como gratuitos.</p>':''}${c.partial?'<p class="notice">O total é parcial: contém estimativas de faixas de apps ou solução sob consulta. O atendimento confirma catálogo, custos e condições.</p>':''}<form id="combo-form"><div class="form-grid"><label>Cidade ou bairro (opcional)<input name="region" maxlength="120" autocomplete="address-level2" placeholder="Onde você quer se conectar?"></label><label>Preferência de contato (opcional)<select name="contact"><option value="">Sem preferência</option><option>WhatsApp</option><option>Ligação</option></select></label></div><button class="button wide" type="submit" ${!comboLines(c).length?'disabled':''}>Revisar mensagem para atendimento ↗</button><p class="helper" style="margin-top:15px">A seleção não conclui a contratação. Disponibilidade e condições são confirmadas pela Nex.</p></form>`;if(!$('#combo-dialog').open)$('#combo-dialog').showModal()}
+function baseDescription(plan) {
+  const speed = plan.speed === 1000 ? '1 Giga' : `${plan.speed} Mega`;
+  return plan.data ? `${speed} + ${plan.data} · ${plan.lines} ${plan.lines === 1 ? 'linha' : 'linhas'}` : speed;
+}
+
+function cameraDescription(plan) {
+  if (!plan.count) return 'Sob avaliação técnica';
+  return `${plan.count} ${plan.count === 1 ? 'câmera' : 'câmeras'} · ${plan.days} dias de retenção`;
+}
+
+function comboLines(c){return [c.base&&{...c.base,description:baseDescription(c.base)},c.camera&&{...c.camera,description:cameraDescription(c.camera)},...c.svas.map(x=>({...x,description:'Interesse · catálogo pendente de validação'}))].filter(Boolean)}
+
+const comboCategories = {
+  internet: {label: 'Internet', slot: 'base', describe: baseDescription},
+  mobile: {label: 'Fibra e chip', slot: 'base', describe: baseDescription},
+  cameras: {
+    label: 'Câmeras',
+    slot: 'camera',
+    describe: plan => `${cameraDescription(plan)} · ${plan.setup === null ? 'Instalação sob avaliação' : `Instalação: ${money(plan.setup)} (pagamento único)`}`
+  },
+  svas: {label: 'Apps e serviços', hint: 'Faixas estimadas. Catálogo e preços serão confirmados pela Nex.'}
+};
+
+let comboCategory = null;
+
+function renderComboOptions() {
+  document.querySelectorAll('[data-combo-category]').forEach(button => {
+    const expanded = button.dataset.comboCategory === comboCategory;
+    button.setAttribute('aria-expanded', expanded);
+    button.textContent = `${expanded ? '−' : '+'} ${comboCategories[button.dataset.comboCategory].label}`;
+  });
+
+  const options = $('#combo-options');
+  options.hidden = !comboCategory;
+  if (!comboCategory) {
+    options.innerHTML = '';
+    return;
+  }
+
+  const {label, slot, describe, hint} = comboCategories[comboCategory];
+  options.innerHTML = `
+    <h3 id="combo-options-title">${label}</h3>
+    ${hint ? `<p class="helper">${hint}</p>` : ''}
+    <ul>${CATALOG[comboCategory].map(plan => {
+      const selected = slot ? state[slot] === plan.id : state.svas.includes(plan.id);
+      const action = selected ? 'Selecionado' : slot && state[slot] ? 'Trocar' : 'Adicionar';
+      return `<li class="combo-option">
+        <div>
+          <strong>${plan.name}</strong>
+          ${describe ? `<small>${describe(plan)}</small>` : ''}
+          <span>${plan.price === null ? 'Sob consulta' : money(plan.price) + '/mês'}</span>
+        </div>
+        <button type="button" data-add="${plan.id}" aria-disabled="${selected}"
+          aria-label="${action}: ${plan.name}">${action}</button>
+      </li>`;
+    }).join('')}</ul>`;
+}
+function openCombo() {
+  const dialog = $('#combo-dialog');
+  if (!dialog.open) {
+    comboCategory = null;
+    $('#combo-content').innerHTML = `
+      <div id="combo-items"></div>
+      <div class="combo-links">${Object.entries(comboCategories).map(([key, {label}]) =>
+        `<button type="button" data-combo-category="${key}" aria-expanded="false" aria-controls="combo-options">+ ${label}</button>`
+      ).join('')}</div>
+      <section id="combo-options" aria-labelledby="combo-options-title" hidden></section>
+      <div id="combo-summary"></div>
+      <form id="combo-form">
+        <div class="form-grid"><label>Cidade ou bairro (opcional)<input name="region" maxlength="120" autocomplete="address-level2" placeholder="Onde você quer se conectar?"></label><label>Preferência de contato (opcional)<select name="contact"><option value="">Sem preferência</option><option>WhatsApp</option><option>Ligação</option></select></label></div>
+        <button class="button wide" type="submit" disabled>Revisar mensagem para atendimento ↗</button>
+        <p class="helper" style="margin-top:15px">A seleção não conclui a contratação. Disponibilidade e condições são confirmadas pela Nex.</p>
+      </form>`;
+  }
+
+  const c = calculate(state);
+  const lines = comboLines(c);
+  $('#combo-items').innerHTML = `${lines.map(x=>`<div class="combo-line"><div><strong>${x.name}</strong><small>${x.description}</small><button class="remove" data-remove="${x.id}">Remover</button></div><b>${x.price===null?'Sob consulta':money(x.price)}</b></div>`).join('')||'<p>Comece escolhendo as possibilidades que combinam com você.</p>'}`;
+  $('#combo-summary').innerHTML = `<div class="totals"><div><span>Internet / fibra + chip</span><b>${money(c.base?.price||0)}</b></div>
+    <div><span>NEX CAM</span><b>${c.camera?.price===null?'Sob consulta':money(c.camera?.price||0)}</b></div>
+    <div><span>Faixas de apps · estimativa</span><b>${money(c.svas.reduce((n,x)=>n+x.price,0))}</b></div>
+    <div><span>Descontos aplicados</span><b>${money(0)}</b></div>
+    <div class="grand-total"><span>${c.partial?'Total mensal parcial':'Total mensal'}</span><strong>${money(c.monthly)}</strong></div>
+    <div><span>Instalação do pacote*</span><b>${c.camera?.setup===null?'Sob avaliação':money(c.setup)}</b></div>
+  </div>
+  ${c.base?'<p class="helper">'+(c.base.included?'Incluídos sem cobrança adicional: '+c.base.included.join(', ')+'.':'A oferta de internet + chip substitui um plano de internet anterior.')+'</p>':''}
+  ${c.camera?'<p class="helper">*Instalação cobrada uma única vez pelo pacote de câmeras. Recursos e equipamentos sujeitos à avaliação.</p>':''}
+  ${c.base?'<p class="helper">Instalação da fibra e custos de ativação/entrega do chip, quando aplicáveis, serão confirmados no atendimento. Não estão definidos como gratuitos.</p>':''}
+  ${c.partial?'<p class="notice">O total é parcial: contém estimativas de faixas de apps ou solução sob consulta. O atendimento confirma catálogo, custos e condições.</p>':''}`;
+  $('#combo-form button[type=submit]').disabled = !lines.length;
+  renderComboOptions();
+
+  if (!dialog.open) {
+    dialog.showModal();
+    dialog.scrollTop = 0;
+  }
+}
+
+$('#combo-dialog').addEventListener('click', event => {
+  const category = event.target.closest('[data-combo-category]');
+  if (category) {
+    const key = category.dataset.comboCategory;
+    comboCategory = comboCategory === key ? null : key;
+    renderComboOptions();
+    if (comboCategory) $('#combo-options-title').scrollIntoView({block: 'nearest'});
+    return;
+  }
+
+  const option = event.target.closest('#combo-options [data-add]');
+  if (!option) return;
+  event.stopPropagation();
+  if (option.getAttribute('aria-disabled') === 'true') return;
+
+  const id = option.dataset.add;
+  add(id);
+  $(`#combo-options [data-add="${id}"]`).focus();
+});
 function message(c,region,contact){return ['Olá, Nex! Quero consultar este combo:',...comboLines(c).map(x=>`${x.name}: ${x.description} — ${x.price===null?'Sob consulta':money(x.price)+'/mês'}`),c.base?.included?'SVAs incluídos, sem cobrança adicional: '+c.base.included.join(', '):'',`Subtotal internet / fibra + chip: ${money(c.base?.price||0)}`,`Subtotal câmeras: ${c.camera?.price===null?'Sob consulta':money(c.camera?.price||0)}`,`Subtotal apps (estimativa por faixa): ${money(c.svas.reduce((n,x)=>n+x.price,0))}`,'Descontos: R$ 0,00',`${c.partial?'Total mensal parcial':'Total mensal'}: ${money(c.monthly)}`,c.camera?`Instalação do pacote de câmeras (pagamento único): ${c.camera.setup===null?'Sob avaliação':money(c.setup)}.`:'',c.base?'Custos únicos de fibra/ativação/entrega: a confirmar.':'',c.partial?'Itens sob consulta e catálogo de apps pendentes de confirmação.':'',region?'Cidade/bairro: '+region:'',contact?'Preferência de contato: '+contact:'','Confirmar cobertura, elegibilidade, fidelidade, disponibilidade e orçamento final.'].filter(Boolean).join('\n')}
 function showInfo(title,html){$('#info-content').innerHTML=`<span class="eyebrow">NEX TELECOM</span><h2 id="info-title" style="font-size:30px;margin:20px 0">${title}</h2>${html}`;$('#info-dialog').showModal()}
 document.addEventListener('submit',e=>{if(e.target.id!=='combo-form')return;e.preventDefault();const data=new FormData(e.target),text=message(calculate(state),String(data.get('region')||'').trim(),String(data.get('contact')||''));$('#combo-dialog').close();showInfo('Seu combo, pronto para conversar.',`<p class="helper">Confira a mensagem. O próximo botão abre o WhatsApp; você decide quando enviar.</p><pre style="white-space:pre-wrap;font:12px/1.8 'DM Sans';background:var(--paper);padding:20px;border-radius:8px;margin:20px 0">${escapeHtml(text)}</pre><a class="button wide" href="https://wa.me/557132526676?text=${encodeURIComponent(text)}" target="_blank" rel="noopener">Abrir no WhatsApp ↗</a>`)});
-document.addEventListener('click',e=>{const t=e.target.closest('button,a');if(!t)return;if(t.matches('[data-close]')){t.closest('dialog').close();return}if(t.matches('[data-combo]')){openCombo();return}if(t.matches('[data-add]')){add(t.dataset.add);return}if(t.matches('[data-remove]')){const id=t.dataset.remove;if(state.base===id)state.base=null;if(state.camera===id)state.camera=null;state.svas=state.svas.filter(x=>x!==id);persist();openCombo();return}if(t.matches('[data-contact],[data-business]')){const topic=t.dataset.business||'Atendimento';showInfo(topic,`<p style="margin:20px 0">Fale com a Nex pelo canal divulgado no site atual.</p><a class="button" target="_blank" rel="noopener" href="https://wa.me/557132526676?text=${encodeURIComponent('Olá, Nex! Gostaria de informações sobre '+topic+'.')}">Abrir conversa no WhatsApp ↗</a>`);return}if(t.matches('[data-tutorial]')){showInfo(`Como acessar ${escapeHtml(t.dataset.tutorial)}`,`<p>O vídeo oficial e os passos de acesso deste serviço aguardam envio e validação pela Nex.</p><p class="notice">Nenhum procedimento foi presumido. Seu combo permanece salvo enquanto você consulta esta área.</p><button class="button blue" data-contact>Solicitar orientação ↗</button>`);return}if(t.matches('[data-details]')){const p=allBase.find(x=>x.id===t.dataset.details);showInfo(p.name,`<p>${p.speed} Mega${p.data?' + '+p.data+' · '+p.lines+' linha(s)':''} por ${money(p.price)}/mês.</p><p class="notice">${p.included?'Benefícios listados no site atual: '+p.included.join(', ')+'.':'Oferta de fibra + chip. '+p.benefits+'.'} Valores e condições aguardam validação. Cobertura, fidelidade e custos únicos são confirmados no atendimento.</p><button class="button" data-select="${p.id}">Escolher oferta ↗</button>`);return}if(t.matches('[data-select]')){$('#info-dialog').close();add(t.dataset.select);return}if(t.matches('.menu-toggle')){const expanded=t.getAttribute('aria-expanded')==='true';t.setAttribute('aria-expanded',!expanded);$('nav').classList.toggle('open',!expanded);return}if(t.matches('.motion-pause')){const off=document.body.classList.toggle('motion-off');t.setAttribute('aria-pressed',off);t.setAttribute('aria-label',off?'Retomar animações':'Pausar animações');t.textContent=off?'▶':'Ⅱ';return}if(t.tagName==='A'){const href=t.getAttribute('href');if(href?.startsWith('/')&&!e.metaKey&&!e.ctrlKey&&!e.shiftKey){e.preventDefault();document.querySelectorAll('dialog[open]').forEach(d=>d.close());history.pushState({},'',href);render();if(location.hash)document.querySelector(location.hash)?.scrollIntoView();else window.scrollTo(0,0)}}});
+document.addEventListener('click',e=>{const t=e.target.closest('button,a');if(!t)return;if(t.matches('[data-close]')){t.closest('dialog').close();return}if(t.matches('[data-combo]')){openCombo();return}if(t.matches('[data-add]')){add(t.dataset.add);return}if(t.matches('[data-remove]')){const id=t.dataset.remove;if(state.base===id)state.base=null;if(state.camera===id)state.camera=null;state.svas=state.svas.filter(x=>x!==id);persist();openCombo();($('#combo-items [data-remove]')||$('.combo-links button')).focus();return}if(t.matches('[data-contact],[data-business]')){const topic=t.dataset.business||'Atendimento';showInfo(topic,`<p style="margin:20px 0">Fale com a Nex pelo canal divulgado no site atual.</p><a class="button" target="_blank" rel="noopener" href="https://wa.me/557132526676?text=${encodeURIComponent('Olá, Nex! Gostaria de informações sobre '+topic+'.')}">Abrir conversa no WhatsApp ↗</a>`);return}if(t.matches('[data-tutorial]')){showInfo(`Como acessar ${escapeHtml(t.dataset.tutorial)}`,`<p>O vídeo oficial e os passos de acesso deste serviço aguardam envio e validação pela Nex.</p><p class="notice">Nenhum procedimento foi presumido. Seu combo permanece salvo enquanto você consulta esta área.</p><button class="button blue" data-contact>Solicitar orientação ↗</button>`);return}if(t.matches('[data-details]')){const p=allBase.find(x=>x.id===t.dataset.details);showInfo(p.name,`<p>${p.speed} Mega${p.data?' + '+p.data+' · '+p.lines+' linha(s)':''} por ${money(p.price)}/mês.</p><p class="notice">${p.included?'Benefícios listados no site atual: '+p.included.join(', ')+'.':'Oferta de fibra + chip. '+p.benefits+'.'} Valores e condições aguardam validação. Cobertura, fidelidade e custos únicos são confirmados no atendimento.</p><button class="button" data-select="${p.id}">Escolher oferta ↗</button>`);return}if(t.matches('[data-select]')){$('#info-dialog').close();add(t.dataset.select);return}if(t.matches('.menu-toggle')){const expanded=t.getAttribute('aria-expanded')==='true';t.setAttribute('aria-expanded',!expanded);$('nav').classList.toggle('open',!expanded);return}if(t.matches('.motion-pause')){const off=document.body.classList.toggle('motion-off');t.setAttribute('aria-pressed',off);t.setAttribute('aria-label',off?'Retomar animações':'Pausar animações');t.textContent=off?'▶':'Ⅱ';return}if(t.tagName==='A'){const href=t.getAttribute('href');if(href?.startsWith('/')&&!href.startsWith('/assets/tutoriais/')&&!e.metaKey&&!e.ctrlKey&&!e.shiftKey){e.preventDefault();document.querySelectorAll('dialog[open]').forEach(d=>d.close());history.pushState({},'',href);render();scrollToPageTarget()}}});
 document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close()}}));
-window.addEventListener('popstate',()=>{render();window.scrollTo(0,0)});window.addEventListener('storage',e=>{if(e.key===KEY)toast('Seu combo foi alterado em outra aba. Recarregue para atualizar.')});render();updateCart();
+function scrollToPageTarget() {
+  const target = document.getElementById(location.hash.slice(1));
+  if (target) target.scrollIntoView();
+  else window.scrollTo(0, 0);
+}
+window.addEventListener('popstate',()=>{render();scrollToPageTarget()});window.addEventListener('storage',e=>{if(e.key===KEY)toast('Seu combo foi alterado em outra aba. Recarregue para atualizar.')});render();updateCart();
+if (location.hash === '#lojas') scrollToPageTarget();

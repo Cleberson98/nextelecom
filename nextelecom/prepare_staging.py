@@ -25,7 +25,10 @@ def package_staging(output):
     )
     assets = sorted(
         file for file in (DIST / "assets").rglob("*")
-        if file.is_file() and file.suffix.lower() in ASSET_EXTENSIONS
+        if file.is_file() and (
+            file.suffix.lower() in ASSET_EXTENSIONS
+            or (file.name == "index.html" and file.is_relative_to(DIST / "assets" / "tutoriais"))
+        )
     )
 
     output.parent.mkdir(parents=True, exist_ok=True)
