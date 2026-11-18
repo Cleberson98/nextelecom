@@ -1,0 +1,44 @@
+.sva-carousel-head{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px}
+.sva-carousel-head p{color:var(--muted);font-size:14px}
+.sva-carousel-head>div{display:flex;gap:8px}
+.sva-carousel-head button{width:42px;height:42px;border:1px solid var(--line);background:white;border-radius:50%;color:var(--ink)}
+.sva-carousel{display:grid;grid-auto-flow:column;grid-auto-columns:290px;gap:20px;overflow-x:auto;overscroll-behavior-x:contain;padding:3px 3px 22px;scroll-snap-type:x proximity;scrollbar-width:thin;margin-bottom:40px}
+.sva-carousel .sva-service{scroll-snap-align:start;min-width:0}
+.sva-service-art{height:145px!important;display:grid;place-items:center;background:#f1f5fc!important}
+.sva-service-art .sva-service-logo{position:static!important;width:82px!important;height:82px!important;max-width:none!important;border-radius:17px;box-shadow:0 8px 22px #15326b0d}
+.sva-carousel .sva-service-content{padding:22px!important}
+.sva-carousel .sva-service-content h3{font-size:23px}
+.sva-service-actions{flex-wrap:wrap}
+.sva-service[hidden]{display:none!important}
+.combo-app-card{border:1px solid #dbe4f2;border-radius:15px;overflow:hidden;background:#fff}
+.combo-app-card.is-selected{border-color:var(--c3);background:#fff9f3}
+.combo-app-card .combo-app-option{border:0;border-radius:0;min-height:140px;width:100%;background:transparent}
+.service-variant-label{display:block;padding:0 13px 16px;font-size:11px;color:#687891}
+.service-variant-label select{display:block;width:100%;font-size:12px;color:#17366d;padding:10px 6px;margin-top:6px;border:1px solid #d6dfed;border-radius:8px;background:white}
+.combo-summary-included .sva-logo-list{gap:5px}
+.combo-summary-included .sva-logo{width:30px;height:30px}
+.nex-quick-actions{position:fixed;z-index:25;right:18px;top:45%;display:flex;flex-direction:column;gap:9px}
+.nex-quick-actions>a,.nex-quick-actions>button{position:relative;display:grid;place-items:center;border:2px solid white;width:46px;height:46px;border-radius:50%;color:white;box-shadow:0 5px 15px #14316c25}
+.nex-quick-actions svg{width:22px;height:22px}
+.quick-menu-button{background:var(--nex-orange);color:var(--on-orange)}
+.quick-phone{background:var(--nex-blue)}
+.quick-whatsapp{background:#16874f}
+.quick-instagram{background:#5d42ba}
+.nex-quick-actions>a>span,.nex-quick-actions>button>span{position:absolute;right:53px;white-space:nowrap;background:#17366d;color:white;padding:7px 11px;border-radius:7px;font-size:12px;opacity:0;pointer-events:none;transition:opacity .2s}
+.nex-quick-actions>a:hover>span,.nex-quick-actions>button:hover>span,.nex-quick-actions>a:focus-visible>span,.nex-quick-actions>button:focus-visible>span{opacity:1}
+.nex-quick-menu{position:absolute;right:60px;top:0;width:255px;border-radius:18px;background:white;box-shadow:0 15px 60px #19376933;padding:20px;border:1px solid #e0e7f3}
+.nex-quick-menu[hidden]{display:none}
+.nex-quick-menu strong{display:block;font-size:15px;margin-bottom:12px}
+.nex-quick-menu a{display:flex;justify-content:space-between;font-size:13px;padding:11px 0;border-bottom:1px solid #edf1f8}
+.nex-quick-menu a:last-child{border-bottom:0}
+.nex-quick-menu a:hover{color:#2759e5}
+@media(max-width:600px){
+ .nex-quick-actions{right:8px;top:auto;bottom:94px;gap:7px}
+ .nex-quick-actions>a,.nex-quick-actions>button{width:39px;height:39px}
+ .nex-quick-actions svg{width:20px;height:20px}
+ .nex-quick-menu{top:auto;bottom:0;right:46px;width:min(270px,calc(100vw - 67px));max-height:70dvh;overflow:auto}
+ .sva-carousel{grid-auto-columns:83%;gap:15px}
+ .sva-carousel-head p{max-width:180px;font-size:12px}
+ .sva-carousel-head button{width:36px;height:38px}
+}
+@media(prefers-reduced-motion:reduce){.sva-carousel{scroll-behavior:auto}}

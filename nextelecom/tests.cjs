@@ -6,3 +6,21 @@ test('projeto personalizado é sob consulta e torna total parcial',()=>{const c=
 test('apps não duplicam cobrança quando o id se repete',()=>{const c=calculate({svas:['sva1490','sva1490']});assert.equal(c.monthly,1490);assert.equal(c.svas.length,1);assert.equal(c.partial,true)});
 test('benefícios incluídos não acrescentam custo',()=>{assert.equal(calculate({base:'fibra300',svas:[]}).monthly,8990)});
 test('preços NEX CAM correspondem à tabela',()=>{assert.deepEqual(CATALOG.cameras.map(x=>x.price),[3490,7990,18990,43990,null]);assert.deepEqual(CATALOG.cameras.map(x=>x.setup),[11990,21990,39990,59990,null])});
+
+test('Disney Top e Premium substituem a opção e recalculam em centavos',()=>{
+ assert.equal(calculate({base:'fibra500',apps:['disney'],appVariants:{disney:'top'}}).monthly,12480);
+ assert.equal(calculate({base:'fibra500',apps:['disney'],appVariants:{disney:'premium'}}).monthly,12980);
+});
+test('serviços distintos são cobrados individualmente sem duplicação',()=>{
+ assert.equal(calculate({base:'fibra500',apps:['disney','disney','hbo'],appVariants:{disney:'premium',hbo:'top'}}).monthly,15470);
+});
+test('benefício de 500 Mega custa zero e perde elegibilidade ao trocar para 300',()=>{
+ assert.equal(calculate({base:'fibra500',apps:['deezer']}).monthly,9990);
+ const lower=calculate({base:'fibra300',apps:['deezer']});
+ assert.equal(lower.monthly,8990);
+ assert.equal(lower.partial,true);
+});
+test('Kaspersky permite upgrade de licenças sem cobrar a inclusão',()=>{
+ assert.equal(calculate({base:'fibra500',apps:['kaspersky']}).monthly,9990);
+ assert.equal(calculate({base:'fibra500',apps:['kaspersky'],appVariants:{kaspersky:'premium'}}).monthly,12980);
+});

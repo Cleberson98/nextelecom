@@ -1,0 +1,1122 @@
+/* Cards comerciais, catálogo de apps e montador de combo. */
+.offer-grid {
+  gap: 22px;
+  align-items: stretch;
+}
+:is(.home-page .home-plans, .internal-page) .offer-card,
+.offer-card {
+  border: 1px solid #dce4f0;
+  border-radius: 22px;
+  padding: 27px 23px 23px;
+  box-shadow: 0 8px 32px #17366d07;
+  background: #fff;
+  overflow: hidden;
+  gap: 0;
+}
+:is(.home-page .home-plans, .internal-page) .offer-card.featured,
+.offer-card.featured {
+  border: 2px solid var(--nex-orange);
+  padding: 26px 22px 22px;
+}
+.offer-heading {
+  min-height: 45px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 9px;
+}
+.offer-card .plan-name {
+  color: #536381;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.offer-tag {
+  max-width: 106px;
+  color: var(--on-orange);
+  background: var(--nex-orange);
+  font-size: 11px;
+  line-height: 1.25;
+  padding: 6px 8px;
+  border-radius: 7px;
+  font-weight: 700;
+}
+:is(.home-page .home-plans, .internal-page) .offer-card .speed,
+.offer-card .speed {
+  font-size: clamp(48px, 4.3vw, 65px);
+  color: var(--ink, #17366d);
+  line-height: 1;
+  letter-spacing: -.055em;
+  margin: 8px 0 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+:is(.home-page .home-plans, .internal-page) .offer-card .speed span,
+.offer-card .speed span {
+  font-size: 16px;
+  color: #e95a1c;
+  letter-spacing: -.02em;
+  margin-left: 4px;
+}
+.offer-fiber {
+  color: #64718a;
+  font-size: 13px;
+  margin: 0 0 24px;
+}
+.offer-included {
+  border-top: 1px solid #e5eaf2;
+  padding-top: 20px;
+}
+.offer-label {
+  display: block;
+  font-size: 12px;
+  color: #4c5d7b;
+  line-height: 1.5;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.offer-card .sva-logo-list {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.offer-card .sva-logo,
+.combo-included-logos .sva-logo,
+.summary-included-logos .sva-logo {
+  display: flex;
+  border: 1px solid #e8ecf2;
+  border-radius: 11px;
+  background: white;
+  padding: 3px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.offer-card .sva-logo img {
+  height: 38px;
+  width: 38px;
+  object-fit: contain;
+  border-radius: 7px;
+}
+.offer-included p {
+  color: #52627d;
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 11px 0 0;
+}
+.offer-extras {
+  background: #f5f8ff;
+  border-radius: 12px;
+  margin-top: 20px;
+  padding: 13px 12px;
+  flex: 1;
+}
+.offer-extras .offer-label {
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+.offer-extras .sva-logo img {
+  width: 31px;
+  height: 31px;
+}
+.offer-extras small {
+  color: #68768c;
+  display: block;
+  font-size: 10px;
+  line-height: 1.5;
+  margin-top: 9px;
+}
+:is(.home-page .home-plans, .internal-page) .offer-card .plan-price,
+.offer-card .plan-price {
+  color: var(--ink, #17366d);
+  margin: 24px 0 18px;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.offer-card .plan-price .currency {
+  font-size: 15px;
+  margin-right: 5px;
+}
+.offer-card .plan-price small {
+  color: #72809a;
+  font-size: 12px;
+  font-weight: 400;
+}
+:is(.home-page .home-plans, .internal-page) .offer-card > .button,
+.offer-card > .button {
+  font-size: 13px;
+  border-radius: 10px;
+  min-height: 47px;
+  color: white;
+  background: var(--ink, #17366d);
+  border-color: transparent;
+  gap: 12px;
+}
+:is(.home-page .home-plans, .internal-page) .offer-card.featured > .button,
+.offer-card.featured > .button {
+  background: var(--nex-orange);
+  color: #152e60;
+}
+:is(.home-page .home-plans, .internal-page) .offer-card > .text-link,
+.offer-card > .text-link {
+  font-size: 12px;
+  color: #52627d;
+  min-height: 35px;
+  margin-top: 9px;
+}
+#combo-dialog {
+  width: min(1130px, 100vw);
+  height: 100dvh;
+  padding: 0;
+  max-width: 100vw;
+  max-height: 100dvh;
+  min-height: 0;
+  border-radius: 24px 0 0 24px;
+  background: white;
+  overflow: hidden;
+}
+#combo-dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+#combo-dialog::backdrop {
+  background: #17315a87;
+  backdrop-filter: blur(5px);
+}
+#combo-dialog .drawer-head {
+  flex: 0 0 auto;
+  min-height: 116px;
+  align-items: center;
+  border-bottom: 1px solid #e5eaf3;
+  padding: 25px 32px;
+  margin: 0;
+  background: white;
+  z-index: 2;
+}
+#combo-dialog .drawer-head .eyebrow {
+  font-size: 10px;
+  letter-spacing: .14em;
+  margin-bottom: 9px;
+  color: #65728a;
+}
+#combo-dialog .drawer-head h2 {
+  font-size: 29px;
+  color: var(--ink, #17366d);
+  line-height: 1.15;
+  letter-spacing: -.04em;
+}
+#combo-dialog .drawer-head .icon-button {
+  background: #f3f6fb;
+  color: #28446e;
+  border: 1px solid #e0e7f2;
+  height: 42px;
+  width: 42px;
+  min-height: 42px;
+  font-size: 27px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+#combo-content {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+.combo-builder {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 350px;
+  height: 100%;
+}
+.combo-selection {
+  overflow: auto;
+  padding: 25px 30px 36px;
+  overscroll-behavior: contain;
+}
+#combo-dialog .combo-links {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 1.3fr;
+  gap: 5px;
+  background: #f1f5fb;
+  border: 1px solid #e9edf5;
+  border-radius: 14px;
+  padding: 5px;
+  margin: 0 0 29px;
+}
+#combo-dialog .combo-links button {
+  min-height: 47px;
+  border: 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: transparent;
+  color: #61728e;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 10px 6px;
+}
+#combo-dialog .combo-links button[aria-selected=true] {
+  background: white;
+  color: var(--ink, #17366d);
+  box-shadow: 0 3px 8px #17366d12;
+}
+.combo-tab-icon {
+  font-size: 19px;
+  line-height: 1;
+}
+#combo-dialog .combo-options {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.combo-category-heading {
+  margin-bottom: 23px;
+}
+.combo-category-heading > span,
+.combo-summary-heading > span {
+  color: #76839a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+.combo-category-heading h3 {
+  color: var(--ink, #17366d);
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: -.04em;
+  margin: 10px 0 9px;
+}
+.combo-category-heading p {
+  font-size: 13px;
+  color: #67758c;
+  line-height: 1.65;
+}
+#combo-dialog .combo-options-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+#combo-dialog .combo-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #dce4f0;
+  border-radius: 15px;
+  background: white;
+  padding: 20px;
+}
+#combo-dialog .combo-option.is-selected {
+  border-color: #ff8f50;
+  background: #fffaf5;
+  box-shadow: inset 0 0 0 1px #ff8f50;
+}
+#combo-dialog .combo-option-copy {
+  min-width: 0;
+  flex: 1;
+}
+#combo-dialog .combo-option-copy > strong {
+  color: var(--ink, #17366d);
+  font-size: 15px;
+  font-weight: 700;
+  display: block;
+}
+#combo-dialog .combo-option-copy > small {
+  display: block;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #67748b;
+  margin-top: 6px;
+}
+.combo-included-logos {
+  display: flex;
+  gap: 5px;
+  margin-top: 12px;
+}
+.combo-included-logos .sva-logo img {
+  height: 23px;
+  width: 23px;
+  border-radius: 5px;
+  object-fit: contain;
+}
+#combo-dialog .combo-option-action {
+  min-width: 116px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 13px;
+  flex-shrink: 0;
+}
+#combo-dialog .combo-option-action b {
+  font-size: 18px;
+  letter-spacing: -.03em;
+  color: var(--ink, #17366d);
+  white-space: nowrap;
+}
+.combo-option-action b small {
+  font-size: 10px;
+  color: #76849a;
+  font-weight: 400;
+  margin-left: 2px;
+}
+#combo-dialog .combo-option-action .button {
+  min-height: 35px;
+  min-width: 108px;
+  font-size: 11px;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: var(--ink, #17366d);
+  color: white;
+}
+#combo-dialog .combo-option-action .combo-selected-button {
+  background: #e7f2ed;
+  color: #2c7455;
+  border-color: #d4e8dc;
+  cursor: default;
+  transform: none;
+}
+.combo-choice-hint {
+  font-size: 11px;
+  color: #758197;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+.combo-summary {
+  background: #f5f7fb;
+  border-left: 1px solid #e3e9f3;
+  padding: 30px 25px;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.combo-summary-heading {
+  margin-bottom: 21px;
+}
+.combo-summary-heading h3 {
+  color: var(--ink, #17366d);
+  margin: 8px 0 5px;
+  font-size: 25px;
+  line-height: 1.2;
+  letter-spacing: -.04em;
+}
+.combo-summary-heading p {
+  color: #76849a;
+  font-size: 12px;
+}
+#combo-dialog .combo-line {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e0e6f0;
+}
+#combo-dialog .combo-line strong {
+  display: block;
+  font-size: 13px;
+  color: var(--ink, #17366d);
+}
+#combo-dialog .combo-line small {
+  display: block;
+  margin-top: 5px;
+  font-size: 11px;
+  color: #76849a;
+  line-height: 1.5;
+}
+#combo-dialog .combo-line > b {
+  font-size: 13px;
+  white-space: nowrap;
+  color: var(--ink, #17366d);
+}
+#combo-dialog .combo-line .remove {
+  font-size: 10px;
+  color: #75839b;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-top: 8px;
+  background: none;
+  border: 0;
+  padding: 0;
+}
+.combo-empty {
+  text-align: center;
+  border: 1px dashed #cdd8e8;
+  border-radius: 14px;
+  padding: 28px 16px;
+  margin-bottom: 15px;
+}
+.combo-empty > span {
+  width: 38px;
+  height: 38px;
+  background: white;
+  border: 1px solid #dce4f0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
+  color: #ff722d;
+  font-size: 25px;
+}
+.combo-empty strong {
+  display: block;
+  font-size: 14px;
+  color: var(--ink, #17366d);
+}
+.combo-empty p {
+  margin-top: 7px;
+  font-size: 11px;
+  color: #75839a;
+}
+.combo-total-label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px;
+  margin: 24px 0 16px;
+  color: var(--ink, #17366d);
+}
+.combo-total-label > span {
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: #65758e;
+}
+.combo-total-label > strong {
+  font-size: 32px;
+  letter-spacing: -.045em;
+  line-height: 1.2;
+}
+.combo-total-label > small {
+  font-size: 12px;
+  color: #76849a;
+}
+.combo-summary-included > span:first-child {
+  display: block;
+  font-size: 11px;
+  color: #68778d;
+  margin-bottom: 9px;
+}
+.summary-included-logos {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+.summary-included-logos .sva-logo img {
+  width: 29px;
+  height: 29px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+.combo-total-note,
+.combo-checkout-note {
+  color: #78859a;
+  font-size: 10px;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+#combo-dialog .form-grid {
+  margin: 23px 0 18px;
+  gap: 16px;
+}
+#combo-dialog .form-grid label {
+  font-size: 11px;
+  color: #4b5e7d;
+  gap: 8px;
+  display: block;
+}
+#combo-dialog .form-grid label > span {
+  color: #8994a5;
+  font-size: 10px;
+  margin-left: 4px;
+}
+#combo-dialog .form-grid input,
+#combo-dialog .form-grid select {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  min-height: 43px;
+  border-radius: 9px;
+  border-color: #dbe3ef;
+  padding: 11px;
+  font-size: 12px;
+  background: white;
+  color: var(--ink, #17366d);
+}
+#combo-form > .button {
+  border-radius: 9px;
+  width: 100%;
+  min-height: 47px;
+  padding: 12px;
+  font-size: 12px;
+  background: var(--nex-orange);
+  color: #15346b;
+}
+#combo-form > .button:disabled {
+  opacity: .45;
+  cursor: default;
+  transform: none;
+}
+.combo-app-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.combo-app-option {
+  border: 1px solid #dde5ef;
+  background: white;
+  border-radius: 14px;
+  position: relative;
+  text-align: left;
+  padding: 20px 14px 17px;
+  min-height: 155px;
+  color: var(--ink, #17366d);
+}
+.combo-app-option.is-selected {
+  border-color: #ff985e;
+  background: #fffaf5;
+  box-shadow: inset 0 0 0 1px #ff985e;
+}
+.combo-app-option:disabled {
+  cursor: default;
+  opacity: 1;
+}
+.combo-app-option > img {
+  height: 46px;
+  width: 46px;
+  object-fit: contain;
+  border-radius: 11px;
+  display: block;
+  margin-bottom: 13px;
+}
+.combo-app-option > strong {
+  display: block;
+  font-size: 12px;
+}
+.combo-app-option > small {
+  display: block;
+  color: #7b8799;
+  font-size: 10px;
+  line-height: 1.5;
+  margin-top: 5px;
+}
+.combo-app-check {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #dbe2ed;
+  border-radius: 50%;
+  color: #76849a;
+  background: white;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+}
+.combo-app-option.is-selected .combo-app-check {
+  background: var(--nex-orange);
+  color: var(--on-orange);
+  border-color: var(--nex-orange);
+}
+.combo-requested-apps {
+  padding: 18px 0;
+  border-bottom: 1px solid #dfe6f0;
+}
+.combo-requested-apps > span {
+  color: #6b7b93;
+  font-size: 11px;
+  display: block;
+  margin-bottom: 12px;
+}
+.combo-requested-apps > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 10px 0;
+}
+.combo-requested-apps img {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  object-fit: contain;
+}
+.combo-requested-apps strong {
+  font-size: 12px;
+}
+.combo-requested-apps button {
+  margin-left: auto;
+  background: white;
+  border: 1px solid #dce3ee;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  color: #74839b;
+  font-size: 17px;
+}
+.combo-requested-apps > small {
+  display: block;
+  color: #7d899c;
+  font-size: 10px;
+  margin-top: 14px;
+}
+.combo-estimate {
+  border-top: 1px solid #e3e9f2;
+  margin-top: 28px;
+  padding-top: 22px;
+}
+.combo-estimate summary {
+  color: #596d8d;
+  font-size: 12px;
+  cursor: pointer;
+}
+.combo-estimate > p {
+  color: #7a879a;
+  font-size: 11px;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+.combo-estimate-options {
+  display: grid;
+  gap: 9px;
+}
+.combo-estimate-options button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border: 1px solid #dce5f0;
+  border-radius: 10px;
+  padding: 13px;
+  color: #29456f;
+}
+.combo-estimate-options button[aria-pressed=true] {
+  border-color: #ff985e;
+  background: #fff7ef;
+}
+.combo-estimate-options strong {
+  font-size: 15px;
+}
+.combo-estimate-options small {
+  font-size: 10px;
+  font-weight: 400;
+}
+.combo-estimate-options span {
+  font-size: 11px;
+}
+.sva-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 30px;
+}
+.sva-filters button {
+  min-height: 42px;
+  border-radius: 9px;
+  border: 1px solid #dce4ef;
+  color: #68778e;
+  background: white;
+  padding: 11px 19px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.sva-filters button[aria-pressed=true] {
+  background: var(--ink, #17366d);
+  border-color: var(--ink, #17366d);
+  color: white;
+}
+.sva-catalog {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+.sva-service {
+  border: 1px solid #dfe6f0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow .25s, transform .25s;
+}
+.sva-service[hidden] {
+  display: none;
+}
+.sva-service:hover {
+  box-shadow: 0 15px 36px #15346b10;
+  transform: translateY(-4px);
+}
+.sva-service-art {
+  height: 205px;
+  position: relative;
+  background: #edf3fc;
+  overflow: hidden;
+}
+.sva-art-disney {
+  background: #daf8f5;
+}
+.sva-art-hbo {
+  background: #e8eaf5;
+}
+.sva-art-deezer {
+  background: #f0dfff;
+}
+.sva-art-ubook {
+  background: #ffede3;
+}
+.sva-art-tvplus {
+  background: #ffebdf;
+}
+.sva-art-kindle {
+  background: #fff6c8;
+}
+.sva-service-art .sva-scene {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sva-service-logo {
+  position: absolute;
+  height: 56px;
+  width: 56px;
+  left: 22px;
+  bottom: 20px;
+  object-fit: contain;
+  background: white;
+  border: 3px solid white;
+  border-radius: 13px;
+  box-shadow: 0 5px 15px #15346b16;
+}
+.sva-service-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.sva-condition {
+  color: #77859b;
+  font-size: 11px;
+  margin-bottom: 11px;
+}
+.sva-service-content h3 {
+  color: var(--ink, #17366d);
+  font-size: 29px;
+  line-height: 1.2;
+  letter-spacing: -.04em;
+}
+.sva-service-content > p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #738096;
+  margin: 15px 0 25px;
+  flex: 1;
+}
+.sva-service-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sva-service-actions .button {
+  font-size: 12px;
+  min-height: 44px;
+  border-radius: 9px;
+  padding: 12px 14px;
+  justify-content: space-between;
+}
+.sva-service-actions .text-link {
+  font-size: 12px;
+  text-align: center;
+  justify-content: center;
+  min-height: 30px;
+}
+@media (max-width: 1150px) {
+  .offer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+  #combo-dialog {
+    width: min(1000px, 100vw);
+  }
+  .combo-builder {
+    grid-template-columns: minmax(0, 1fr) 320px;
+  }
+  .combo-selection {
+    padding: 24px;
+  }
+  .combo-app-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 800px) {
+  .sva-catalog {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+  #combo-dialog {
+    width: 100vw;
+    border-radius: 0;
+  }
+  #combo-dialog .drawer-head {
+    min-height: 100px;
+    padding: 20px 24px;
+  }
+  #combo-dialog .drawer-head h2 {
+    font-size: 25px;
+  }
+  #combo-content {
+    overflow: auto;
+  }
+  .combo-builder {
+    height: auto;
+    min-height: 100%;
+    display: block;
+  }
+  .combo-selection,
+  .combo-summary {
+    overflow: visible;
+  }
+  .combo-summary {
+    border-left: 0;
+    border-top: 1px solid #e1e8f2;
+    padding: 28px 24px;
+  }
+  .combo-app-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .combo-requested-apps > div {
+    max-width: 340px;
+  }
+  .combo-total-label > strong {
+    font-size: 35px;
+  }
+  .combo-summary-included {
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 560px) {
+  .offer-grid,
+  .home-page .home-plans .offer-grid,
+  .internal-page .offer-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  :is(.home-page .home-plans, .internal-page) .offer-card,
+  .offer-card {
+    padding: 27px;
+    border-radius: 19px;
+  }
+  :is(.home-page .home-plans, .internal-page) .offer-card.featured,
+  .offer-card.featured {
+    padding: 26px;
+  }
+  .offer-heading {
+    min-height: 37px;
+  }
+  .offer-tag {
+    max-width: none;
+    font-size: 11px;
+  }
+  :is(.home-page .home-plans, .internal-page) .offer-card .speed,
+  .offer-card .speed {
+    font-size: 65px;
+  }
+  .offer-fiber {
+    font-size: 14px;
+    margin-bottom: 23px;
+  }
+  .offer-label,
+  .offer-extras .offer-label {
+    font-size: 12px;
+  }
+  .offer-included p {
+    font-size: 13px;
+  }
+  .offer-card .sva-logo img {
+    width: 41px;
+    height: 41px;
+  }
+  .offer-extras .sva-logo img {
+    width: 32px;
+    height: 32px;
+  }
+  .offer-extras small {
+    font-size: 11px;
+  }
+  :is(.home-page .home-plans, .internal-page) .offer-card .plan-price,
+  .offer-card .plan-price {
+    font-size: 40px;
+  }
+  .sva-catalog {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .sva-filters {
+    gap: 7px;
+    margin-bottom: 23px;
+  }
+  .sva-filters button {
+    font-size: 11px;
+    padding: 10px 13px;
+  }
+  .sva-service-art {
+    height: 190px;
+  }
+  .sva-service-content {
+    padding: 23px;
+  }
+  #combo-dialog .drawer-head {
+    min-height: 93px;
+    padding: 18px;
+  }
+  #combo-dialog .drawer-head h2 {
+    font-size: 23px;
+  }
+  #combo-dialog .drawer-head .eyebrow {
+    margin-bottom: 7px;
+    font-size: 9px;
+  }
+  .combo-selection {
+    padding: 19px 16px 27px;
+  }
+  #combo-dialog .combo-links {
+    gap: 3px;
+    padding: 4px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+  }
+  #combo-dialog .combo-links button {
+    font-size: 11px;
+    gap: 4px;
+    min-height: 43px;
+  }
+  .combo-tab-icon {
+    font-size: 15px;
+  }
+  .combo-category-heading h3 {
+    font-size: 25px;
+  }
+  .combo-category-heading p {
+    font-size: 12px;
+  }
+  #combo-dialog .combo-option {
+    gap: 12px;
+    padding: 16px 13px;
+  }
+  #combo-dialog .combo-option-copy > strong {
+    font-size: 13px;
+  }
+  #combo-dialog .combo-option-copy > small {
+    font-size: 10px;
+  }
+  #combo-dialog .combo-option-action {
+    min-width: 99px;
+    gap: 12px;
+  }
+  #combo-dialog .combo-option-action b {
+    font-size: 16px;
+  }
+  #combo-dialog .combo-option-action .button {
+    min-width: 96px;
+    min-height: 37px;
+    font-size: 10px;
+    padding: 8px 9px;
+  }
+  .combo-app-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .combo-app-option {
+    padding: 17px 13px;
+    min-height: 150px;
+  }
+  .combo-summary {
+    padding: 27px 22px 35px;
+  }
+  .combo-summary-heading h3 {
+    font-size: 28px;
+  }
+  #combo-dialog .combo-line strong {
+    font-size: 14px;
+  }
+  #combo-dialog .form-grid label {
+    font-size: 12px;
+  }
+  #combo-dialog .form-grid input,
+  #combo-dialog .form-grid select {
+    min-height: 46px;
+    font-size: 13px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .offer-card,
+  .sva-service {
+    transition: none;
+  }
+  .offer-card:hover,
+  .sva-service:hover {
+    transform: none;
+  }
+}
+.logo-app-strip {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+.logo-app-strip .app-tile,
+.internal-page .logo-app-strip .app-tile {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 13px;
+  border: 1px solid #dfe6f0;
+  border-radius: 15px;
+  padding: 23px;
+  background: white;
+  min-height: 160px;
+  transition: border-color .2s, transform .2s;
+}
+.logo-app-strip .app-tile:hover {
+  transform: translateY(-4px);
+  border-color: #ff9e65;
+}
+.logo-app-strip img {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  object-fit: contain;
+}
+.logo-app-strip strong {
+  color: var(--ink, #17366d);
+  font-size: 13px;
+}
+.logo-app-strip .app-tile span {
+  color: #78869c;
+  font-size: 10px;
+}
+@media (max-width: 1000px) {
+  .logo-app-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 560px) {
+  .logo-app-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .logo-app-strip .app-tile,
+  .internal-page .logo-app-strip .app-tile {
+    min-height: 150px;
+    padding: 20px;
+  }
+}

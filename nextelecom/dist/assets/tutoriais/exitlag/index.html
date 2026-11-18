@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#d91e34"><meta name="description" content="Ative sua conta e instale o ExitLag no computador."><title>Como acessar ExitLag | Nex Telecom</title>
+<style>
+:root {--ink:#11202c;--muted:#657381;--green:#962c38;--green2:#bd4d5a;--leaf:#f8e2e5;--navy:#233971;--orange:#f54f29;--line:#ece5e6;--shadow:0 18px 72px rgba(30,70,44,.075)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:#fbf8f8;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+button,a{font:inherit}
+button{cursor:pointer}
+button:focus-visible,a:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
+button:disabled{cursor:default}
+.shell{width:min(1490px,calc(100% - 64px));margin:auto}
+.hero{position:relative;min-height:248px;overflow:hidden;background:linear-gradient(110deg,#fff 0%,#fff 52%,#f9e8ea 79%,#d98a93 100%)}
+.hero::after{content:"";position:absolute;z-index:0;width:560px;height:560px;right:-250px;top:-310px;border:90px solid rgba(58,167,66,.20);border-radius:50%;pointer-events:none}
+.hero-image{position:absolute;right:0;top:0;width:min(43vw,585px);height:238px;object-fit:cover;object-position:right top;pointer-events:none;z-index:1}
+.hero-inner{position:relative;min-height:248px;z-index:2;padding:24px 0 30px}
+.brand-row{display:flex;align-items:center;gap:17px;margin-bottom:20px}
+.logo-nex{width:167px;height:auto;display:block}
+.brand-divider{width:1px;height:36px;background:#dacfd0}
+.docway-logo{width:67px;height:67px;display:grid;place-items:center;background:linear-gradient(145deg,#d3717d,#b6404e);color:white;border-radius:20px;font-size:15px;letter-spacing:-.7px;font-weight:850;box-shadow:0 10px 22px #5db74624}
+.eyebrow{font-size:14px;color:#8e2531;text-transform:uppercase;font-weight:800;letter-spacing:.27em;margin:0 0 4px}
+.hero h1{font-size:clamp(32px,3.7vw,54px);line-height:1.05;letter-spacing:-.055em;margin:0;font-weight:850;max-width:880px}
+.hero h1 span{color:#8f3640}
+.hero-desc{font-size:clamp(15px,1.25vw,19px);color:#66727d;max-width:690px;margin:13px 0 0;line-height:1.43}
+.hero-stamp{position:absolute;z-index:4;right:10px;bottom:27px;background:rgba(255,255,255,.95);border:1px solid #eee1e3;box-shadow:0 10px 34px #29682b12;padding:11px 16px;border-radius:18px;display:flex;align-items:center;gap:10px;color:#64494c;font-weight:650;font-size:13px;max-width:220px}
+.hero-stamp svg{height:28px;width:28px;flex:none;stroke:#a03b47;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+main{padding:0 0 43px}
+.timeline-card{background:#fff;border-radius:24px;border:1px solid #f3f0f0;box-shadow:0 7px 30px #457d4311;padding:22px 22px 15px;position:relative;margin-top:-1px;z-index:3}
+.timeline-track{height:3px;background:#eee9ea;position:absolute;top:42px;left:calc(22px + (100% - 44px)/16);right:calc(22px + (100% - 44px)/16);overflow:hidden}
+.timeline-track span{display:block;width:0;height:100%;background:#a33643;transition:width .45s cubic-bezier(.2,.8,.3,1)}
+.timeline{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));position:relative;z-index:1;gap:2px}
+.stage-tab{border:0;background:transparent;padding:0 3px 6px;min-width:0;display:flex;flex-direction:column;align-items:center;gap:11px;color:#6e7b84;transition:color .2s}
+.stage-number{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-size:15px;line-height:1;font-weight:800;background:#f0eded;color:#71808b;box-shadow:0 0 0 6px white;transition:background .3s,transform .3s,color .3s}
+.stage-tab[aria-current="step"] .stage-number{background:linear-gradient(145deg,#ac2b3a,#902532);color:white;transform:scale(1.075);box-shadow:0 4px 16px #26944a30,0 0 0 6px white}
+.stage-tab.done .stage-number{background:#f5dfe2;color:#922431}
+.stage-text{font-size:11.5px;line-height:1.3;max-width:140px;min-height:33px;font-weight:600;text-align:center}
+.stage-tab[aria-current="step"] .stage-text{color:#6f1a24;font-weight:800}
+.stage-tab:hover:not([aria-current="step"]) .stage-number{background:#edd4d7;transform:translateY(-2px)}
+.detail-panel{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(28px,4vw,66px);align-items:stretch;margin-top:22px;background:#fff;border-radius:30px;border:1px solid #f1e9ea;padding:32px;min-height:480px;box-shadow:var(--shadow);overflow:hidden}
+.panel-info{padding:8px 0 10px 14px;display:flex;flex-direction:column;justify-content:center;min-width:0}
+.step-chip{align-self:flex-start;display:inline-flex;align-items:center;gap:9px;border-radius:999px;background:#f8e4e6;color:#912a36;font-size:12px;font-weight:800;letter-spacing:.09em;padding:11px 16px}
+.step-chip::before{content:"";width:7px;height:7px;border-radius:50%;background:#bb4c59}
+.panel-info h2{font-size:clamp(28px,3vw,45px);line-height:1.12;letter-spacing:-.052em;font-weight:850;margin:24px 0 19px;max-width:620px}
+.panel-copy{font-size:17px;line-height:1.6;max-width:560px;color:#607080;margin:0}
+.options{display:grid;gap:12px;max-width:590px}
+.info-option{border:1px solid #eee3e4;border-radius:20px;padding:17px 18px;display:flex;align-items:flex-start;gap:16px;background:#fff;box-shadow:0 6px 23px #24552d05}
+.info-option .option-icon{width:49px;height:49px;display:grid;place-items:center;flex:none;border-radius:50%;background:#f7dfe2;color:#7d232e}
+.option-icon svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}
+.option-copy{flex:1;min-width:0}.option-copy strong{font-size:17px;display:block;margin-bottom:4px;letter-spacing:-.02em}.option-copy p{font-size:14px;line-height:1.48;margin:0;color:#65727d}
+.store-labels{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}
+.store-label{font-size:12px;font-weight:700;background:#241719;color:#fff;display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border-radius:8px;white-space:nowrap}
+.store-label svg{width:15px;height:15px;fill:white;stroke:white}
+.site-link{display:inline-flex;max-width:100%;overflow-wrap:anywhere;align-items:center;gap:7px;margin-top:10px;border-radius:11px;background:#f8e4e6;color:#6d232c;font-weight:750;padding:10px 11px;text-decoration:none;font-size:13px}
+.site-link:hover{background:#f2d0d4;text-decoration:underline}
+.site-link svg{width:17px;height:17px;flex:none;stroke:currentColor;stroke-width:2;fill:none}
+.tip{display:flex;align-items:flex-start;gap:13px;background:#f9edee;padding:16px 18px;border-radius:17px;color:#65383d;font-size:14px;line-height:1.5;margin-top:22px;max-width:590px}
+.tip-icon{width:28px;height:28px;border-radius:50%;background:#f0d1d5;flex:none;color:#8d2733;display:grid;place-items:center;font-size:15px;font-weight:800}
+.stage-visual{min-width:0;display:flex;flex-direction:column;gap:13px;justify-content:center}
+.phone-canvas{position:relative;border-radius:28px;background:radial-gradient(circle at 33% 4%,#fef7f8 0%,#f9e8ea 53%,#f6e1e3 100%);min-height:365px;height:390px;display:flex;align-items:center;justify-content:center;padding:10px 16px;overflow:hidden;isolation:isolate}
+.phone-canvas::before{content:"";z-index:-1;position:absolute;width:360px;height:360px;left:4%;top:-125px;border:45px solid rgba(116,201,94,.1);border-radius:50%;animation:orb 9s ease-in-out infinite alternate}
+.phone-canvas::after{content:"";z-index:-1;position:absolute;width:240px;height:240px;right:-120px;bottom:-135px;background:#efced2;border-radius:50%}
+@keyframes orb{to{transform:translate(15px,16px)}}
+.phone-row{height:100%;display:flex;align-items:center;justify-content:center;gap:clamp(15px,2.4vw,38px);max-width:100%}
+.phone{height:96%;width:auto;max-width:45%;object-fit:contain;filter:drop-shadow(0 10px 10px rgba(15,31,23,.12));display:block;will-change:transform}
+.phone.one{height:96%;max-width:44%}
+.phone.two{height:96%;max-width:40%}
+.phone-single{height:96%;max-width:52%;object-fit:contain;filter:drop-shadow(0 11px 12px rgba(11,32,16,.15))}
+.visual-note{max-width:230px;min-width:135px;padding:18px 16px;background:linear-gradient(135deg,#f6d6da,#efcbcf);border-radius:18px;color:#51252a;font-weight:750;line-height:1.4;font-size:15px}
+.visual-note::before{content:"↙";display:block;color:#8b232f;font-size:26px;line-height:1;margin-bottom:8px}
+.visual-strip{display:flex;align-items:center;gap:12px;background:#f9ebed;border-radius:16px;padding:14px 16px;font-size:13px;font-weight:650;color:#714b4f;line-height:1.5}
+.visual-strip .symbol{width:30px;height:30px;display:grid;place-items:center;border-radius:50%;background:#f0d1d5;color:#922935;font-size:19px;flex:none}
+.success-image{height:265px;width:265px;border-radius:50%;background:linear-gradient(135deg,#c95764,#9c2f3c);box-shadow:0 12px 44px #5fb75135;color:#fff;display:grid;place-items:center;animation:popin .8s cubic-bezier(.2,.8,.3,1)}
+.success-image svg{width:150px;height:150px;stroke:currentColor;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;fill:none}
+@keyframes popin{0%{transform:scale(.89);opacity:.65}100%{transform:scale(1);opacity:1}}
+.footer-nav{display:flex;gap:20px;align-items:center;justify-content:space-between;padding:24px 5px 6px}
+.nav-btn{min-width:168px;border-radius:999px;padding:16px 24px;display:inline-flex;align-items:center;justify-content:center;gap:12px;font-weight:800;font-size:15px;line-height:1.2;transition:transform .2s,background .2s,box-shadow .2s}
+.nav-btn:not(:disabled):hover{transform:translateY(-2px)}
+.nav-btn.prev{background:#fff;border:1.5px solid #b6727a;color:#872a35}
+.nav-btn.prev:disabled{border-color:#ece6e7;color:#b2bec5;background:#fbf9f9}
+.nav-btn.next{background:linear-gradient(110deg,#8e2935,#a43946);border:1px solid #9c2e3b;color:white;box-shadow:0 8px 22px #329d5227}
+.nav-btn.next:hover{box-shadow:0 13px 27px #329d523a}
+.nav-btn svg{width:19px;height:19px;stroke:currentColor;stroke-width:2.3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.pager{display:flex;gap:9px;align-items:center;justify-content:center}
+.pager button{border:none;padding:0;width:10px;height:10px;border-radius:99px;background:#ddd8d9;transition:width .3s,background .3s}
+.pager button[aria-current="step"]{width:30px;background:#9d2c39}
+.pager button:hover{background:#d78a93}
+.bottom-utilities{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 8px 0;font-size:12px;color:#86787a}
+.utility-link{border:0;background:none;color:#822b35;text-decoration:underline;text-underline-offset:3px;font-size:13px;font-weight:750;padding:8px}
+.enter{animation:slide-in .44s cubic-bezier(.2,.8,.25,1)}
+@keyframes slide-in{from{opacity:.15;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.overview-heading{font-size:29px;line-height:1.2;font-weight:850;letter-spacing:-.04em;margin:28px 0 17px}
+.overview-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+.overview-tile{border:1px solid #eee6e7;border-radius:23px;box-shadow:0 12px 35px #315b310b;background:#fff;min-width:0;padding:20px 18px 18px;display:flex;flex-direction:column;text-align:left;gap:12px;transition:transform .2s,box-shadow .2s}
+.overview-tile:hover{transform:translateY(-4px);box-shadow:0 16px 40px #315b311b}
+.overview-title{display:flex;align-items:center;gap:12px;min-height:48px;font-weight:800;font-size:15px;letter-spacing:-.02em;line-height:1.3}
+.overview-index{flex:none;width:37px;height:37px;color:#fff;border-radius:50%;display:grid;place-items:center;font-weight:850;background:linear-gradient(145deg,#cb5866,#af3a48)}
+.overview-photo{height:205px;display:flex;align-items:center;justify-content:center;background:#f9e9eb;border-radius:15px;overflow:hidden}
+.overview-photo img{height:96%;width:auto;max-width:87%;object-fit:contain;filter:drop-shadow(0 4px 5px #22342b22)}
+.overview-photo svg{height:110px;width:110px;stroke:#af4e59;fill:none;stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
+.overview-tile p{font-size:12.5px;line-height:1.5;color:#7b6769;min-height:53px;margin:0}
+.view-switch{display:inline-flex;align-items:center;gap:7px;background:white;border:1px solid #e6cfd2;color:#7b242e;border-radius:999px;padding:11px 17px;font-size:13px;font-weight:800;position:absolute;right:0;top:22px;box-shadow:0 6px 24px #3d6c3610}
+.view-switch:hover{background:#faebed}
+.view-switch svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2}
+.view-area{position:relative}
+[hidden]{display:none!important}
+.visually-hidden{position:absolute!important;overflow:hidden;clip-path:inset(50%);height:1px;width:1px;white-space:nowrap}
+@media(min-width:1280px){.hero{min-height:270px}.hero-inner{min-height:270px;padding-top:26px}.phone-canvas{height:440px}.detail-panel{min-height:548px}.phone{height:98%}.phone-single{height:99%}}
+@media(max-width:1050px){.hero-image{opacity:.72}.hero-stamp{display:none}.shell{width:min(100% - 38px,1490px)}.stage-text{font-size:10.5px}.detail-panel{padding:25px;grid-template-columns:.93fr 1.07fr;gap:22px}.panel-info{padding-left:0}.phone-canvas{height:365px}.visual-note{font-size:12px;padding:14px 12px;max-width:135px}.phone-single{max-width:57%}.overview-grid{gap:10px}}
+@media(max-width:750px){
+ .shell{width:calc(100% - 28px)}
+ .hero{min-height:248px}
+ .hero-inner{padding-top:20px;min-height:248px;padding-bottom:25px}
+ .hero-image{display:none}
+ .brand-row{gap:10px;margin-bottom:19px}
+ .logo-nex{width:137px}
+ .brand-divider{height:29px}
+ .docway-logo{width:49px;height:49px;font-size:11px;border-radius:14px}
+ .eyebrow{font-size:11px;letter-spacing:.22em}
+ .hero h1{font-size:33px;letter-spacing:-.052em;max-width:390px}
+ .hero-desc{max-width:340px;font-size:14px;line-height:1.45}
+ .timeline-card{border-radius:19px;padding:16px 0 12px;margin-top:-1px;overflow:hidden}
+ .timeline-track{display:none}
+ .timeline{display:flex;align-items:flex-start;overflow-x:auto;gap:0;padding:4px 14px 8px;scrollbar-width:none;scroll-snap-type:x proximity}
+ .timeline::-webkit-scrollbar{display:none}
+ .stage-tab{flex:0 0 81px;padding:0 3px 6px;scroll-snap-align:center;gap:9px}
+ .stage-number{width:35px;height:35px;font-size:13px}
+ .stage-text{font-size:10px;max-width:80px;min-height:40px}
+ .detail-panel{display:flex;flex-direction:column;min-height:0;gap:15px;padding:23px 17px 18px;margin-top:13px;border-radius:25px}
+ .panel-info{padding:0 5px;justify-content:flex-start}
+ .step-chip{font-size:11px;padding:9px 13px}
+ .panel-info h2{font-size:30px;line-height:1.13;margin:17px 0 15px}
+ .panel-copy{font-size:14px;line-height:1.58}
+ .options{gap:9px}
+ .info-option{padding:12px 12px;gap:10px;border-radius:15px}
+ .info-option .option-icon{height:36px;width:36px}
+ .option-icon svg{height:20px;width:20px}
+ .option-copy strong{font-size:14px;margin-bottom:3px}
+ .option-copy p{font-size:12px}
+ .store-labels{gap:5px;margin-top:8px}.store-label{font-size:10px;padding:6px 8px}
+ .site-link{font-size:10.5px;padding:8px;overflow-wrap:anywhere;margin-top:6px}
+ .tip{font-size:12px;padding:12px;margin-top:12px}
+ .phone-canvas{height:355px;min-height:0;border-radius:21px;padding:10px 8px}
+ .phone-row{gap:12px}.phone.one{height:94%;max-width:46%}.phone.two{height:94%;max-width:46%}
+ .phone-single{height:97%;max-width:54%}
+ .visual-note{font-size:11px;padding:11px 9px;min-width:102px;max-width:135px;border-radius:11px}
+ .visual-note::before{font-size:20px;margin-bottom:5px}
+ .visual-strip{font-size:11px;padding:11px 13px;border-radius:13px}.visual-strip .symbol{height:27px;width:27px}
+ .success-image{height:225px;width:225px}.success-image svg{height:132px;width:132px}
+ .footer-nav{gap:11px;padding:18px 0 4px}.nav-btn{min-width:0;padding:14px 16px;font-size:13px}.nav-btn.prev,.nav-btn.next{flex:1;max-width:155px}
+ .pager{gap:5px}.pager button{height:7px;width:7px}.pager button[aria-current="step"]{width:15px}
+ .bottom-utilities{padding-top:11px;font-size:10px;gap:4px}.utility-link{font-size:11px;flex:none}
+ .view-switch{position:static;margin-top:14px;width:100%;justify-content:center}
+ .overview-heading{font-size:24px;margin-top:20px}
+ .overview-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.overview-tile{padding:12px;border-radius:16px;gap:9px}
+ .overview-index{height:29px;width:29px;font-size:13px}.overview-title{font-size:12px;min-height:54px;gap:8px}
+ .overview-photo{height:163px;border-radius:12px}.overview-tile p{font-size:11px;min-height:70px}
+}
+@media(max-width:375px){.hero h1{font-size:30px}.panel-info h2{font-size:27px}.nav-btn{font-size:11px;padding:13px 8px}.phone-canvas{height:310px}.visual-note{max-width:101px;font-size:10px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+:root{--accent:#233971;--pale:#eef2fa}
+body{background:#f9fafc}
+.hero{background:linear-gradient(110deg,#fff 0%,#fff 55%,var(--pale) 100%)}
+.hero::after{border-color:color-mix(in srgb,var(--accent) 15%,transparent)}
+.hero-art{position:absolute;right:-24px;top:-35px;width:34%;height:310px;display:grid;place-items:center;transform:rotate(-5deg);border-radius:0 0 0 140px;background:linear-gradient(140deg,var(--pale),color-mix(in srgb,var(--accent) 60%,white));overflow:hidden}
+.hero-art::after{content:"";position:absolute;width:390px;height:390px;border:60px solid #ffffff25;border-radius:50%;right:-90px;top:-145px}
+.hero-art img{height:134px;width:134px;object-fit:contain;border-radius:28px;transform:rotate(5deg);filter:drop-shadow(0 14px 20px #00000015);z-index:1}
+.service-logo{width:58px;height:58px;object-fit:contain;display:block}
+.hero-art img{border-radius:0}
+[data-service="exitlag"] .service-logo{background:#121319;padding:5px;border-radius:14px}
+[data-service="exitlag"] .hero-art img{background:#121319;padding:14px;border-radius:28px}
+.brand-row{margin-bottom:21px}.hero h1{max-width:74%;font-size:clamp(32px,3.7vw,54px)}
+.hero h1 span,.eyebrow{color:var(--accent)}
+.hero-desc{max-width:63%}
+.all-guides{position:absolute;right:0;top:24px;border:1px solid #d8e1ee;background:#ffffffed;color:var(--navy);border-radius:999px;padding:10px 16px;text-decoration:none;font-size:12px;font-weight:750;z-index:3}
+.hero-stamp{display:none}
+.timeline-card{padding-top:23px}.timeline{grid-template-columns:repeat(var(--count,8),minmax(78px,1fr));overflow-x:auto;scrollbar-width:thin;padding:4px 4px 9px}
+.timeline-track{top:48px;left:calc(22px + (100% - 44px)/(var(--count,8)*2));right:calc(22px + (100% - 44px)/(var(--count,8)*2))}
+.stage-tab{gap:10px;padding-left:5px;padding-right:5px}.stage-text{font-size:11px;max-width:110px}
+.stage-tab[aria-current="step"] .stage-number,.nav-btn.next,.overview-index{background:var(--accent)}
+.stage-tab[aria-current="step"] .stage-text,.step-chip,.utility-link{color:var(--accent)}
+.stage-tab.done .stage-number,.step-chip,.tip,.visual-strip,.overview-photo{background:var(--pale)}
+.stage-number{box-shadow:0 0 0 5px white}.stage-tab[aria-current="step"] .stage-number{box-shadow:0 0 0 5px white,0 5px 16px #00000012}
+.timeline-track span{background:var(--accent)}
+.detail-panel{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);min-height:480px;box-shadow:0 15px 65px #23397109}
+.panel-info h2{font-size:clamp(27px,3vw,43px)}
+.panel-copy{font-size:17px;line-height:1.65}
+.step-links{display:flex;flex-direction:column;align-items:flex-start;gap:7px;margin-top:12px}
+.site-link{background:var(--pale);color:var(--accent);line-height:1.5}
+.site-link:hover{background:color-mix(in srgb,var(--pale) 85%,var(--accent));text-decoration:none}
+.step-chip::before,.tip-icon,.visual-strip .symbol{background:var(--accent);color:white}
+.tip{color:#465364}.tip-icon{font-size:14px}
+.source-visual{position:relative;display:flex;align-items:center;justify-content:center;width:100%;height:430px;min-width:0;overflow:hidden;padding:18px 18px 42px;background:linear-gradient(135deg,#fff 0%,var(--pale) 100%);border:1px solid #e7ebf1;border-radius:25px}
+.source-screen{display:block;max-height:100%;max-width:100%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 8px 9px #00000012);border-radius:8px}
+.zoom-caption{position:absolute;right:14px;bottom:11px;display:flex;align-items:center;gap:6px;font-size:11px;font-weight:650;background:#ffffffd9;padding:6px 10px;border-radius:999px;color:#405070}
+.zoom-caption svg{height:16px;width:16px;fill:none;stroke:currentColor;stroke-width:1.8}
+.source-visual:hover .zoom-caption{background:var(--accent);color:#fff}
+.visual-strip{color:var(--accent)}
+.nav-btn.prev{border-color:var(--accent);color:var(--accent)}
+.nav-btn.next:hover{background:color-mix(in srgb,var(--accent) 88%,black)}
+.pager button[aria-current="step"]{background:var(--accent)}
+.progress-counter{display:none}.skip-step{align-self:flex-start;background:white;color:var(--accent);border:1px solid var(--accent);border-radius:12px;margin-top:16px;padding:11px 14px;font-weight:750;font-size:13px}
+.route-selector{display:flex;gap:8px;flex-wrap:wrap;margin:17px 0 5px;max-width:75%}
+.route-choice{border:1px solid #dbe1e9;border-radius:999px;background:#fff;padding:11px 17px;color:#43516a;font-size:13px;font-weight:750}
+.route-choice[aria-pressed=true]{background:var(--accent);color:white;border-color:var(--accent)}
+.route-name{color:var(--accent);font-weight:750}
+.bottom-utilities{align-items:flex-start;line-height:1.6}
+.overview-copy{font-size:12.5px;line-height:1.6;color:#66717e}
+.overview-photo img{max-width:94%;max-height:90%;width:auto;height:auto;border-radius:5px}
+.overview-heading:focus,#step-title:focus{outline:none}
+.image-dialog{width:min(1180px,calc(100% - 28px));max-height:94dvh;padding:55px 18px 18px;border:0;border-radius:24px;background:white;box-shadow:0 20px 120px #0005}
+.image-dialog::backdrop{background:#111b38b3;backdrop-filter:blur(4px)}
+.image-dialog img{display:block;max-width:100%;max-height:calc(90dvh - 70px);width:auto;height:auto;object-fit:contain;margin:auto}
+.dialog-close{position:absolute;top:12px;right:14px;border:1px solid #dbe1e9;background:white;padding:9px 15px;border-radius:999px;font-weight:750;color:var(--navy)}
+.noscript{background:#fff7e8;color:#694a19;padding:14px;border-radius:12px;margin:20px auto;max-width:960px}
+@media(min-width:1280px){.source-visual{height:440px}}
+@media(max-width:1050px){.source-visual{height:385px}.hero-art{width:31%}.hero-art img{height:110px;width:110px}.hero-desc{max-width:68%}.hero h1{max-width:75%}}
+@media(max-width:750px){
+ .hero-inner{min-height:255px;padding-bottom:25px}.hero-art{display:none}.hero h1,.hero-desc{max-width:100%}.hero h1{font-size:34px}.hero-desc{font-size:14px}
+ .brand-row{margin-bottom:20px}.service-logo{width:45px;height:45px;border-radius:11px}.logo-nex{width:135px}.brand-divider{height:31px}
+ .all-guides{font-size:10px;right:0;top:23px;padding:8px 10px}
+ .timeline{display:flex;padding:4px 13px 9px;gap:0}.timeline-card{padding-top:16px}.stage-tab{flex:0 0 84px}.stage-text{font-size:10px}.stage-number{height:35px;width:35px}
+ .detail-panel{display:flex;flex-direction:column;padding:23px 17px 17px;gap:17px;min-height:0}.panel-info h2{font-size:29px;line-height:1.14}.panel-copy{font-size:14px;line-height:1.65}
+ .source-visual{height:365px;padding:15px 10px 39px;border-radius:20px}.stage-visual{gap:10px}.visual-strip{font-size:11px}.tip{font-size:12px}
+ .site-link{font-size:12px;padding:10px 12px}.step-links{margin-top:8px}.route-selector{max-width:100%;gap:6px}.route-choice{font-size:12px;padding:10px 13px}
+ .footer-nav{gap:9px}.nav-btn{padding:14px 15px;font-size:13px;min-height:45px}.pager{flex-shrink:1}.pager.long{display:none}.progress-counter.long{display:block;font-size:12px;font-weight:700;color:#6c7886}
+ .bottom-utilities{font-size:10px;gap:8px}.utility-link{font-size:11px}.overview-copy{font-size:11px}.overview-photo{height:180px}
+ .overview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.overview-title{font-size:12px;min-height:50px}.image-dialog{border-radius:18px}
+}
+@media(max-width:375px){.hero h1{font-size:30px}.source-visual{height:320px}.all-guides{padding:8px;font-size:9px}.logo-nex{width:120px}.service-logo{width:39px;height:39px}.brand-row{gap:8px}.nav-btn{font-size:12px;padding:13px 11px}.panel-info h2{font-size:27px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+:root{--accent:#d91e34;--pale:#fff0f2}</style></head>
+<body data-service="exitlag">
+<header class="hero"><div class="hero-art" aria-hidden="true"><img src="assets/logo-sva.png" alt=""></div>
+<div class="shell hero-inner"><a class="all-guides" href="../index.html">Todos os guias</a><div class="brand-row"><img class="logo-nex" src="../assets/logo-nex-oficial.png" alt="Nex Telecom" width="2048" height="502"><span class="brand-divider" aria-hidden="true"></span><img class="service-logo" src="assets/logo-sva.png" alt="ExitLag"></div>
+<p class="eyebrow">Passo a passo</p><h1>Como acessar o <span>ExitLag</span></h1><p class="hero-desc">Ative sua conta e instale o ExitLag no computador.</p>
+<div id="route-selector" class="route-selector" role="group" aria-label="Forma de acesso" hidden></div></div></header>
+<noscript><div class="noscript">Ative o JavaScript para navegar pelas etapas. Comece por: Abra o e-mail de ativação. Na sua caixa de entrada, procure a mensagem de ativação do ExitLag e clique em “Crie sua Senha!”.</div></noscript>
+<main class="shell"><div class="view-area"><div id="guided-view">
+<section id="timeline-card" class="timeline-card" aria-label="Etapas do tutorial"><div class="timeline-track" aria-hidden="true"><span id="timeline-fill"></span></div><nav id="timeline" class="timeline" aria-label="Selecionar etapa"></nav></section>
+<section class="detail-panel" id="detail-panel" aria-label="Etapa atual"><div class="panel-info" id="panel-info"></div><div class="stage-visual" id="stage-visual"></div></section>
+<nav class="footer-nav" aria-label="Navegação do tutorial"><button class="nav-btn prev" type="button" id="prev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>Voltar</button><div class="pager" id="pager" aria-label="Indicadores de progresso"></div><span id="progress-text" class="progress-counter long" aria-hidden="true"></span><button class="nav-btn next" type="button" id="next"><span id="next-label">Próximo</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button></nav>
+<div class="bottom-utilities"><span><span class="route-name" id="route-name"></span> · Guia Nex Telecom. Faça o acesso no próprio serviço.</span><button class="utility-link" type="button" id="show-overview">Ver todas as etapas</button></div></div>
+<section id="overview-view" hidden><button type="button" class="view-switch" id="back-overview"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>Voltar ao passo a passo</button><h2 class="overview-heading" id="overview-heading" tabindex="-1">Todas as etapas</h2><div class="overview-grid" id="overview-grid"></div></section></div>
+<div class="visually-hidden" id="announce" aria-live="polite"></div></main>
+<dialog class="image-dialog" id="image-dialog" aria-label="Tela ampliada"><button type="button" class="dialog-close" id="close-image">Fechar imagem ×</button><img id="zoomed-image" alt=""></dialog>
+<script id="tutorial-data" type="application/json">{"slug":"exitlag","name":"ExitLag","task":"NEX-020","pdf":"Como Logar ExitLag Computador.pdf","color":"#d91e34","pale":"#fff0f2","subtitle":"Ative sua conta e instale o ExitLag no computador.","routes":[{"id":"computador","label":"Computador","steps":[{"page":2,"short":"E-mail de ativação","title":"Abra o e-mail de ativação","copy":"Na sua caixa de entrada, procure a mensagem de ativação do ExitLag e clique em “Crie sua Senha!”.","tip":"Comece pelo e-mail recebido após a contratação.","image":"assets/pagina-02.webp"},{"page":3,"short":"Informe o e-mail","title":"Informe seu e-mail","copy":"Na página do ExitLag, digite seu endereço de e-mail no campo indicado. Depois clique em “Enviar”.","tip":"Use o e-mail associado à ativação do benefício.","image":"assets/pagina-03.webp"},{"page":4,"short":"Confirme o envio","title":"Confirme o envio da mensagem","copy":"A página informará que o e-mail de redefinição de senha foi enviado. Clique em “OK”.","tip":"O próximo passo acontece na sua caixa de e-mail.","image":"assets/pagina-04.webp"},{"page":5,"short":"Redefina a senha","title":"Abra o e-mail de redefinição","copy":"Volte ao seu e-mail e procure a mensagem de redefinição de senha. Clique em “Redefinir Minha Senha”.","tip":"Confira se abriu a mensagem mais recente do ExitLag.","image":"assets/pagina-05.webp"},{"page":6,"short":"Crie a senha","title":"Crie uma nova senha","copy":"Na página aberta, crie sua nova senha e clique em “Redefinir Minha Senha”.","tip":"Utilize letras, números e símbolos, seguindo os requisitos exibidos pelo serviço.","image":"assets/pagina-06.webp"},{"page":7,"short":"Salve as alterações","title":"Salve as alterações","copy":"Depois de preencher os campos solicitados, clique em “Salvar Alterações”.","tip":"Guarde sua senha para fazer login no programa.","image":"assets/pagina-07.webp"},{"page":8,"short":"Download ExitLag","title":"Acesse o download do ExitLag","copy":"Na sua conta, clique no botão “Download ExitLag”.","tip":"O tutorial a seguir mostra a instalação no computador.","image":"assets/pagina-08.webp"},{"page":9,"short":"Baixe o instalador","title":"Baixe o instalador","copy":"Na página de download, clique novamente em “Download ExitLag”. O arquivo começará a ser baixado no seu PC.","tip":"Aguarde o navegador concluir o download.","image":"assets/pagina-09.webp"},{"page":10,"short":"Abra o arquivo","title":"Abra o arquivo baixado","copy":"Clique no arquivo do ExitLag para iniciar a instalação.","tip":"Localize o arquivo na área de downloads do navegador ou na pasta Downloads.","image":"assets/pagina-10.webp"},{"page":11,"short":"Avance com Next","title":"Avance na instalação","copy":"Na janela do instalador, clique em “Next” para seguir pelas etapas de instalação.","tip":"Acompanhe as instruções apresentadas pelo instalador.","image":"assets/pagina-11.webp"},{"page":12,"short":"Clique em Install","title":"Instale o programa","copy":"Na etapa de instalação, clique em “Install”.","tip":"Aguarde a conclusão antes de fechar a janela.","image":"assets/pagina-12.webp"},{"page":13,"short":"Finalize com Finish","title":"Finalize a instalação","copy":"Quando a instalação terminar, clique em “Finish”.","tip":"Depois, abra o ExitLag no computador.","image":"assets/pagina-13.webp"},{"page":14,"short":"Faça login","title":"Entre com sua conta","copy":"No ExitLag, informe seu e-mail e a senha criada no início deste passo a passo.","tip":"As credenciais são digitadas no próprio programa, não neste tutorial.","image":"assets/pagina-14.webp"},{"page":15,"short":"Aguarde carregar","title":"Aguarde o carregamento","copy":"Ao iniciar, o programa exibirá uma tela de carregamento. Aguarde a abertura da tela principal.","tip":"Mantenha sua conexão com a internet durante o carregamento.","image":"assets/pagina-15.webp"},{"page":16,"short":"Tudo pronto","title":"Seu ExitLag está pronto","copy":"Com a tela principal aberta, o ExitLag está pronto para ser utilizado.","tip":"Você concluiu as etapas de ativação e instalação apresentadas neste guia.","final":true,"image":"assets/pagina-16.webp"}]}]}</script><script>(() => {
+  'use strict';
+  const data = JSON.parse(document.getElementById('tutorial-data').textContent);
+  const $ = id => document.getElementById(id);
+  const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const external = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 4h7v7m0-7-9 9M19 13v6H5V5h6"/></svg>';
+  let routeIndex = 0, current = 0, overview = false, touchStart = null;
+  const route = () => data.routes[routeIndex];
+  const steps = () => route().steps;
+  function readHash() {
+    const match = location.hash.slice(1).match(/^([^/]+)\/(\d+)$/);
+    if (!match) return;
+    const idx = data.routes.findIndex(r => r.id === match[1]);
+    if (idx >= 0) { routeIndex = idx; current = Math.max(0, Math.min(data.routes[idx].steps.length - 1, Number(match[2]) - 1)); }
+  }
+  function setHash() {
+    const hash = `#${route().id}/${current + 1}`;
+    try { history.replaceState(null, '', hash); } catch (_) { /* file previews still work without history access */ }
+  }
+  function staticView() {
+    const list = steps();
+    $('timeline').style.setProperty('--count', list.length);
+    $('timeline-card').style.setProperty('--count', list.length);
+    $('timeline').innerHTML = list.map((s,i) => `<button class="stage-tab" data-step="${i}" type="button" aria-label="Etapa ${i+1}: ${esc(s.short)}"><span class="stage-number">${i+1}</span><span class="stage-text">${esc(s.short)}</span></button>`).join('');
+    $('pager').classList.toggle('long', list.length > 8);
+    $('pager').innerHTML = list.map((s,i) => `<button type="button" data-step="${i}" aria-label="Ir para etapa ${i+1}"></button>`).join('');
+    $('overview-grid').innerHTML = list.map((s,i) => `<button type="button" class="overview-tile" data-step="${i}"><span class="overview-title"><span class="overview-index">${i+1}</span><span>${esc(s.short)}</span></span><span class="overview-photo"><img loading="lazy" src="${esc(s.image)}" alt="${esc(s.title)}" /></span><span class="overview-copy">${esc(s.copy)}</span></button>`).join('');
+    document.querySelectorAll('[data-step]').forEach(b => b.addEventListener('click', () => go(Number(b.dataset.step))));
+    $('route-selector').hidden = data.routes.length < 2;
+    $('route-selector').innerHTML = data.routes.map((r,i) => `<button type="button" class="route-choice" data-route="${i}" aria-pressed="${i===routeIndex}">${esc(r.label)}</button>`).join('');
+    document.querySelectorAll('[data-route]').forEach(b => b.addEventListener('click', () => { routeIndex = Number(b.dataset.route); current = 0; staticView(); go(0); }));
+    $('route-name').textContent = route().label;
+  }
+  function render(focus = false) {
+    const s = steps()[current], count = steps().length;
+    const links = (s.links || []).map(link => `<a class="site-link" target="_blank" rel="noopener noreferrer" href="${esc(link.url)}">${esc(link.label)} ${external}</a>`).join('');
+    $('panel-info').innerHTML = `<div class="step-chip">PASSO ${current+1} DE ${count}</div><h2 id="step-title" tabindex="-1">${esc(s.title)}</h2><p class="panel-copy">${esc(s.copy)}</p><div class="step-links">${links}</div><div class="tip"><span class="tip-icon" aria-hidden="true">${s.final ? '✓' : 'i'}</span><span>${esc(s.tip)}</span></div>${Number.isInteger(s.skipTo) ? `<button class="skip-step" type="button" id="skip-step">${esc(s.skipLabel)} →</button>` : ''}`;
+    $('stage-visual').innerHTML = `<button type="button" class="source-visual" id="open-image" aria-label="Ampliar tela: ${esc(s.title)}"><img class="source-screen" src="${esc(s.image)}" alt="Tela de referência de ${esc(data.name)}: ${esc(s.title)}" draggable="false"><span class="zoom-caption"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6M10 7v6M7 10h6"/></svg>Ampliar tela</span></button><div class="visual-strip"><span class="symbol" aria-hidden="true">${s.final ? '✓' : current+1}</span><span>${esc(s.short)}</span></div>`;
+    $('open-image').addEventListener('click', () => { $('zoomed-image').src = s.image; $('zoomed-image').alt = `Tela de ${data.name}: ${s.title}`; $('image-dialog').showModal(); });
+    if ($('skip-step')) $('skip-step').addEventListener('click', () => go(s.skipTo));
+    document.querySelectorAll('.stage-tab, #pager [data-step]').forEach(b => {
+      const index = Number(b.dataset.step);
+      b.classList.toggle('done', index < current);
+      if (index === current) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current');
+    });
+    $('timeline-fill').style.width = `${count < 2 ? 100 : current / (count-1) * 100}%`;
+    $('prev').disabled = current === 0;
+    $('next-label').textContent = current === count-1 ? 'Recomeçar' : 'Próximo';
+    $('announce').textContent = `Etapa ${current+1} de ${count}: ${s.title}`;
+    $('progress-text').textContent = `${current+1} / ${count}`;
+    $('detail-panel').dataset.currentStep = current + 1;
+    $('detail-panel').dataset.route = route().id;
+    for (const id of ['panel-info','stage-visual']) { const el = $(id); el.classList.remove('enter'); void el.offsetWidth; el.classList.add('enter'); }
+    const tab = $('timeline').querySelector(`[data-step="${current}"]`);
+    const target = tab.offsetLeft - $('timeline').clientWidth/2 + tab.offsetWidth/2;
+    $('timeline').scrollTo({left: Math.max(0,target), behavior: reduce ? 'auto' : 'smooth'});
+    setHash();
+    if (focus) $('step-title').focus({preventScroll:true});
+  }
+  function go(index) {
+    current = Math.max(0, Math.min(steps().length-1,index));
+    overview = false; $('overview-view').hidden = true; $('guided-view').hidden = false;
+    render(true);
+  }
+  $('prev').addEventListener('click', () => go(current-1));
+  $('next').addEventListener('click', () => go(current === steps().length-1 ? 0 : current+1));
+  $('show-overview').addEventListener('click', () => {
+    overview = true; $('guided-view').hidden = true; $('overview-view').hidden = false;
+    $('overview-heading').focus({preventScroll:true});
+    $('announce').textContent = `Visão geral: ${steps().length} etapas`;
+  });
+  $('back-overview').addEventListener('click', () => go(current));
+  $('close-image').addEventListener('click', () => $('image-dialog').close());
+  $('image-dialog').addEventListener('click', event => { if (event.target === $('image-dialog')) $('image-dialog').close(); });
+  window.addEventListener('hashchange', () => { readHash(); staticView(); go(current); });
+  window.addEventListener('keydown', e => {
+    if ($('image-dialog').open || ['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)) return;
+    if (overview) { if(e.key === 'Escape') go(current); return; }
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(current+1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(current-1); }
+  });
+  $('detail-panel').addEventListener('touchstart', e => { if (e.touches.length === 1) touchStart = [e.touches[0].clientX,e.touches[0].clientY]; }, {passive:true});
+  $('detail-panel').addEventListener('touchend', e => {
+    if (!touchStart || !e.changedTouches.length) return;
+    const dx = e.changedTouches[0].clientX-touchStart[0], dy = e.changedTouches[0].clientY-touchStart[1]; touchStart = null;
+    if (Math.abs(dx)>70 && Math.abs(dx)>Math.abs(dy)*1.8) go(current+(dx<0?1:-1));
+  }, {passive:true});
+  readHash(); staticView(); render();
+})();
+</script></body></html>
