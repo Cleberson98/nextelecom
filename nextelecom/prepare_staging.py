@@ -8,7 +8,7 @@ from zipfile import ZIP_DEFLATED, ZipFile
 
 PROJECT = Path(__file__).resolve().parent
 DIST = PROJECT / "dist"
-ROUTES = ("internet", "movel", "cam", "svas", "empresarial", "quem-somos", "indique", "contato", "trabalheconosco", "app")
+ROUTES = ("internet", "movel", "cam", "svas", "empresarial", "quem-somos", "indique", "contato", "trabalheconosco", "app", "formulario-de-vagas")
 ASSET_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".avif", ".svg", ".woff2", ".ico"}
 
 

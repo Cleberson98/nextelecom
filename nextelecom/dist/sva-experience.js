@@ -58,7 +58,7 @@
  widget.className='nex-quick-actions';
  widget.setAttribute('aria-label','Atalhos Nex Telecom');
  widget.innerHTML='<nav class="nex-quick-menu" id="nex-quick-menu" aria-label="Menu de atalhos" hidden><strong>Como podemos ajudar?</strong>'+
- [['/internet','Nossos planos'],['https://central.nextelecom.net.br/','Sua fatura'],['/quem-somos','Quem somos'],['/svas','Apps e entretenimento'],['/contato','Nossas lojas'],['https://wa.me/557132526676','Fale conosco'],['https://fast.com/pt/','Teste de velocidade']].map(([url,name])=>'<a href="'+url+'" '+(url.startsWith('http')?'target="_blank" rel="noopener"':'')+'>'+name+' <span>↗</span></a>').join('')+'</nav>'+
+ [['/internet','Nossos planos'],['https://central.nextelecom.net.br/','Sua fatura'],['/quem-somos','Quem somos'],['/svas','Apps e entretenimento'],['/contato','Nossas lojas'],['https://wa.me/557132526676','Fale conosco'],['https://fast.com/pt/','Teste de velocidade']].map(([url,name])=>'<a href="'+url+'" '+(url.startsWith('http')?'target="_blank" rel="noopener"':'')+'>'+name+' <span>↗︎</span></a>').join('')+'</nav>'+
  '<button class="quick-menu-button" type="button" data-quick-menu aria-controls="nex-quick-menu" aria-expanded="false" aria-label="Abrir menu de atalhos">'+icon('M4 6h16M4 12h16M4 18h16')+'<span>Menu</span></button>'+
  '<a class="quick-phone" href="tel:+557132526676" aria-label="Ligar para Nex Telecom">'+icon('M7 3 3 6c0 8 7 15 15 15l3-4-5-4-3 2-4-4 2-3-4-5Z')+'<span>Ligar agora</span></a>'+
  '<a class="quick-whatsapp" href="https://wa.me/557132526676" target="_blank" rel="noopener" aria-label="Conversar com a Nex no WhatsApp">'+icon('M21 11a9 9 0 0 1-13 8l-5 2 1-5a9 9 0 1 1 17-5ZM8 7c0 4 2 6 6 7')+'<span>WhatsApp</span></a>'+

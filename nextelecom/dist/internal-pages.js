@@ -11,10 +11,10 @@ function myNexApp() {
           <h2>Baixe no seu celular</h2>
           <div class="my-nex-store-links">
             <a class="button blue" href="https://play.google.com/store/apps/details?id=com.hubsoft_client_app.nextelecom&hl=pt_BR" target="_blank" rel="noopener" aria-label="Baixar Minha Nex no Google Play">
-              <span><small>Para Android</small>Google Play</span><span aria-hidden="true">↗</span>
+              <span><small>Para Android</small>Google Play</span><span aria-hidden="true">↗︎</span>
             </a>
             <a class="button blue" href="https://apps.apple.com/br/app/minha-nex/id6670446541" target="_blank" rel="noopener" aria-label="Baixar Minha Nex na App Store">
-              <span><small>Para iPhone</small>App Store</span><span aria-hidden="true">↗</span>
+              <span><small>Para iPhone</small>App Store</span><span aria-hidden="true">↗︎</span>
             </a>
           </div>
         </div>
@@ -74,7 +74,7 @@ function hero({ eyebrow, title, copy, cta = 'Encontre seu plano', url = '#planos
           <p>${copy}</p>
           <div class="hero-actions">
             ${link(url, cta, 'button' + (isBusiness ? ' light' : ''))}
-            <button class="text-link" data-combo>Monte seu combo <span aria-hidden="true">↗</span></button>
+            <button class="text-link" data-combo>Monte seu combo <span aria-hidden="true">↗︎</span></button>
           </div>
           ${logos}
         </div>
@@ -86,7 +86,7 @@ function hero({ eyebrow, title, copy, cta = 'Encontre seu plano', url = '#planos
     </div>
     ${art.banner ? nexBannerImage(art.banner, art.alt, 'masthead-banner-image', 'fetchpriority="high"') + '</div>' : ''}
     <div class="masthead-caption">
-      <div class="wrap">${nexIcon(art.icon)}<span>${art.caption}</span><a href="${anchor}">Explore <span aria-hidden="true">↓</span></a></div>
+      <div class="wrap">${nexIcon(art.icon)}<span>${art.caption}</span><a href="${anchor}">Explore <span aria-hidden="true">↓︎</span></a></div>
     </div>
     <button class="motion-pause" aria-label="Pausar animações" aria-pressed="false">Ⅱ</button>
   </section>`;
@@ -99,7 +99,7 @@ function band() {
         <span class="eyebrow">SEU COMBO, DO SEU JEITO</span>
         <h2>A conexão é sua.<br>As escolhas também.</h2>
         <p>Combine internet, celular e os apps que fazem parte da sua rotina.</p>
-        <button class="button" data-combo>Montar meu combo <span aria-hidden="true">↗</span></button>
+        <button class="button" data-combo>Montar meu combo <span aria-hidden="true">↗︎</span></button>
       </div>
       <div class="combo-band-art">
         <img src="/assets/mascot-official.webp" loading="lazy" alt="Mascote da Nex convidando você a montar seu combo" width="1024" height="1024">
@@ -123,7 +123,7 @@ function nexStoreSection() {
         <span class="eyebrow">NEX, PERTO DE VOCÊ</span>
         <h2>Uma conexão também se faz de pessoas.</h2>
         <p>Nossa equipe recebe você e ajuda a encontrar a conexão que combina com a sua casa ou empresa.</p>
-        <button class="button outline" data-business="Atendimento na loja São Cristóvão">Falar com a equipe <span aria-hidden="true">↗</span></button>
+        <button class="button outline" data-business="Atendimento na loja São Cristóvão">Falar com a equipe <span aria-hidden="true">↗︎</span></button>
       </div>
     </div>
   </section>`;
@@ -177,7 +177,7 @@ const NEX_STORES = [
 function contact() {
   const whatsapp = 'https://wa.me/557132526676';
   const external = (url, label, cls = 'text-link') =>
-    `<a class="${cls}" href="${url}" target="_blank" rel="noopener">${label} <span aria-hidden="true">↗</span></a>`;
+    `<a class="${cls}" href="${url}" target="_blank" rel="noopener">${label} <span aria-hidden="true">↗︎</span></a>`;
 
   const stores = NEX_STORES.map(([address, map], index) => {
     const number = String(index + 1).padStart(2, '0');
@@ -225,7 +225,7 @@ function contact() {
         <div class="cards-three">
           <article><h3>Baixe o app Minha Nex</h3><div class="contact-actions">${external('https://play.google.com/store/apps/details?id=com.hubsoft_client_app.nextelecom&hl=pt_BR', 'Google Play')}${external('https://apps.apple.com/br/app/minha-nex/id6670446541', 'App Store')}</div></article>
           <article><h3>Teste a conexão</h3>${external('https://test.nextelecom.com.br/', 'Teste de velocidade')}</article>
-          <article><h3>Acompanhe a Nex</h3><div class="contact-actions"><a class="text-link" href="/trabalheconosco">Trabalhe conosco ↗</a>${external('https://www.instagram.com/nextelecomoficial/', 'Instagram')}</div></article>
+          <article><h3>Acompanhe a Nex</h3><div class="contact-actions"><a class="text-link" href="/trabalheconosco">Trabalhe conosco ↗︎</a>${external('https://www.instagram.com/nextelecomoficial/', 'Instagram')}</div></article>
         </div>
       </div>
     </section>` + faq(commonFaq);

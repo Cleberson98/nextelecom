@@ -33,8 +33,8 @@ function homeCampaigns() {
       title: 'Sua internet.<br><em>Seu próximo play.</em>',
       copy: 'Fibra para fazer acontecer. Seus apps favoritos para aproveitar cada momento.',
       services: ['SKY+', 'Ubook Plus', 'Kiddle Pass'], speed: '500', unit: 'MEGA', value: '99,90',
-      action: '<button class="button blue" data-add="fibra500">Montar meu plano <span>↗</span></button>',
-      extra: '<a class="text-link" href="#planos">Comparar os planos ↓</a>',
+      action: '<button class="button blue" data-add="fibra500">Montar meu plano <span>↗︎</span></button>',
+      extra: '<a class="text-link" href="#planos">Comparar os planos ↓︎</a>',
       banner: 'gamer', alt: 'Mascote da Nex jogando em uma arena gamer iluminada por neon.',
       note: 'Escolha 2 apps elegíveis sem custo no NEX Standard. Consulte condições.'
     },
@@ -43,8 +43,8 @@ function homeCampaigns() {
       title: 'Em casa.<br>Na rua.<br><em>Na sua vida.</em>',
       copy: 'A fibra que você já conhece. Mais 7 GB no celular para continuar conectado.',
       services: [], speed: '500', unit: 'MEGA + 7 GB', value: '118,90',
-      action: '<button class="button blue" data-add="movel500">Quero fibra + chip <span>↗</span></button>',
-      extra: '<a class="text-link" href="/movel">Ver todas as opções ↗</a>',
+      action: '<button class="button blue" data-add="movel500">Quero fibra + chip <span>↗︎</span></button>',
+      extra: '<a class="text-link" href="/movel">Ver todas as opções ↗︎</a>',
       banner: 'chip', alt: 'Mascote da Nex mostrando um chip e um celular.',
       note: 'Preço do combo de fibra + uma linha móvel. Consulte cobertura e condições.'
     },
@@ -53,8 +53,8 @@ function homeCampaigns() {
       title: 'Dê o play<br><em>do seu jeito.</em>',
       copy: 'Filmes, séries, música e muito mais para aproveitar com a sua conexão Nex.',
       services: ['Disney+', 'HBO Max', 'Deezer'],
-      action: '<a class="button blue" href="/svas">Explorar os apps <span>↗</span></a>',
-      extra: '<button class="text-link" data-combo>Montar meu combo ↗</button>',
+      action: '<a class="button blue" href="/svas">Explorar os apps <span>↗︎</span></a>',
+      extra: '<button class="text-link" data-combo>Montar meu combo ↗︎</button>',
       banner: 'cinema-orange', alt: 'Mascote da Nex assistindo à TV na sala.',
       note: 'Consulte os apps disponíveis e as condições de cada plano.'
     }
@@ -86,21 +86,21 @@ function campaignBand() {
   return '<section class="home-combo-band"><div class="wrap home-combo-grid"><div class="home-combo-art reveal"><span class="combo-art-disc" aria-hidden="true"></span><img src="/assets/mascot-official.webp" alt="Mascote da Nex convidando você a escolher seu combo" loading="lazy" width="600" height="850"></div>' +
     '<div class="home-combo-copy reveal"><span class="eyebrow">ESPAÇO PARA O QUE VOCÊ GOSTA</span><h2>Seu mundo.<br><em>Seu combo.</em></h2><p>Escolha sua internet, combine seus serviços favoritos e deixe a conexão com a sua cara.</p>' +
     nexSvaLogos(['Disney+','HBO Max','Deezer','TV Plus','Ubook','Kindle Pass'],{size:46}) +
-    '<button class="button blue" data-combo>Começar meu combo <span>↗</span></button><span class="helper">Você escolhe. A Nex confirma as condições.</span></div></div></section>';
+    '<button class="button blue" data-combo>Começar meu combo <span>↗︎</span></button><span class="helper">Você escolhe. A Nex confirma as condições.</span></div></div></section>';
 }
 
 function homeServices() {
   const services = NEX_SVAS.filter(service => ['disney','hbo','deezer'].includes(service.id));
   return '<section class="home-sva-discovery section" id="servicos"><div class="wrap">' +
     sectionHead('SEUS FAVORITOS, MAIS PERTO','Sua conexão também<br>é entretenimento.','Filmes, séries e música. Conheça os serviços e escolha o que faz parte do seu dia.') +
-    '<div class="sva-feature-grid">' + services.map(service => '<a href="/svas" class="sva-feature sva-feature-' + service.id + ' reveal"><div class="sva-feature-image"><img src="' + service.art + '" alt="' + service.name + '" loading="lazy" width="900" height="580"></div><div class="sva-feature-copy"><img src="' + service.logo + '" alt="" width="48" height="48"><div><h3>' + service.name + '</h3><p>' + service.description + '</p></div><span aria-hidden="true">↗</span></div></a>').join('') +
+    '<div class="sva-feature-grid">' + services.map(service => '<a href="/svas" class="sva-feature sva-feature-' + service.id + ' reveal"><div class="sva-feature-image"><img src="' + service.art + '" alt="' + service.name + '" loading="lazy" width="900" height="580"></div><div class="sva-feature-copy"><img src="' + service.logo + '" alt="" width="48" height="48"><div><h3>' + service.name + '</h3><p>' + service.description + '</p></div><span aria-hidden="true">↗︎</span></div></a>').join('') +
     '</div><div class="sva-discovery-footer"><p>Serviços opcionais, conforme o plano e o catálogo disponível.</p>' + link('/svas','Conhecer todos os apps','text-link') + '</div></div></section>';
 }
 
 function home() {
   return homeCampaigns() +
     '<section class="product-nav" aria-label="Soluções Nex"><div class="wrap">' +
-    [['/internet','wifi','Internet fibra','Até 1 Giga para sua casa'],['/movel','phone','Minha NEX Móvel','Sua fibra + um chip'],['/svas','play','Apps e serviços','Dê play nos seus favoritos'],['/empresarial','business','Para sua empresa','Conexões para ir além']].map(item => '<a href="' + item[0] + '">' + nexIcon(item[1]) + '<span><strong>' + item[2] + '</strong><small>' + item[3] + '</small></span><b>↗</b></a>').join('') +
+    [['/internet','wifi','Internet fibra','Até 1 Giga para sua casa'],['/movel','phone','Minha NEX Móvel','Sua fibra + um chip'],['/svas','play','Apps e serviços','Dê play nos seus favoritos'],['/empresarial','business','Para sua empresa','Conexões para ir além']].map(item => '<a href="' + item[0] + '">' + nexIcon(item[1]) + '<span><strong>' + item[2] + '</strong><small>' + item[3] + '</small></span><b>↗︎</b></a>').join('') +
     '</div></section><section class="section home-plans" id="planos"><div class="wrap">' +
     sectionHead('FIBRA QUE ACOMPANHA VOCÊ','Encontre seu próximo plano.','Internet em fibra e apps para aproveitar ainda mais. Compare, escolha e personalize.') +
     internetCards() + '</div></section>' +

@@ -156,3 +156,21 @@
     height: 340px;
   }
 }
+.careers-form-page {
+  background: #eef3fb;
+}
+
+.careers-form-page h1 {
+  margin: 24px 0;
+  font-size: clamp(32px, 4vw, 52px);
+}
+
+.careers-form-frame {
+  display: block;
+  width: 100%;
+  height: max(1000px, 90dvh);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: white;
+  margin-bottom: 20px;
+}

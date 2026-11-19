@@ -1,5 +1,5 @@
 function careers() {
-  const formUrl = 'https://nextelecom.com.br/formulario-de-vagas';
+  const formUrl = '/formulario-de-vagas';
   const reportUrl = 'https://nextelecom.com.br/wp-content/uploads/2026/09/RELATORIO-DE-TRANSPARENCIA-1.pdf';
   const values = [
     ['Ética', 'Agimos com integridade, transparência e responsabilidade em todas as nossas decisões e relações.'],
@@ -19,7 +19,7 @@ function careers() {
           <h1 id="careers-title">Trabalhe conosco</h1>
           <p class="careers-lead">Somos a Nex Telecom, somos a sua conexão.</p>
           <p>Venha fazer parte da Nex Telecom e cresça junto com uma empresa que conecta pessoas, transforma realidades e investe em inovação, tecnologia e desenvolvimento humano.</p>
-          <a class="button blue" href="${formUrl}" target="_blank" rel="noopener">Cadastrar Currículo <span aria-hidden="true">↗</span></a>
+          <a class="button blue" href="${formUrl}">Cadastrar Currículo <span aria-hidden="true">↗︎</span></a>
         </div>
         <img class="careers-photo" src="/assets/equipe-nex-carreiras.jpg" width="900" height="1100" alt="Profissional da Nex sorrindo no trabalho" fetchpriority="high">
       </div>
@@ -29,7 +29,7 @@ function careers() {
         <h2 id="careers-apply-title">Cadastre seu currículo.</h2>
         <div>
           <p>Quer fazer parte da nossa equipe? Acesse o formulário, selecione a área de seu interesse e envie suas informações para nosso time de talentos.</p>
-          <a class="button outline" href="${formUrl}" target="_blank" rel="noopener">Cadastrar Currículo <span aria-hidden="true">↗</span></a>
+          <a class="button outline" href="${formUrl}">Cadastrar Currículo <span aria-hidden="true">↗︎</span></a>
         </div>
       </div>
     </section>
@@ -54,8 +54,21 @@ function careers() {
         <div>
           <p>A Nex Tecnologia da Informação Ltda. disponibiliza o Relatório de Transparência e Igualdade Salarial de Mulheres e Homens – 2º Semestre de 2026, em atendimento à Lei nº 14.611/2023.</p>
           <p>O relatório apresenta dados consolidados sobre a remuneração dos colaboradores e a composição do quadro de empregados, contribuindo para ampliar a transparência e o acompanhamento da igualdade salarial entre mulheres e homens.</p>
-          <a class="button light" href="${reportUrl}" target="_blank" rel="noopener">Acessar Relatório <span aria-hidden="true">↗</span></a>
+          <a class="button light" href="${reportUrl}" target="_blank" rel="noopener">Acessar Relatório <span aria-hidden="true">↗︎</span></a>
         </div>
+      </div>
+    </section>`;
+}
+
+function careersForm() {
+  return `
+    <section class="section careers-form-page" aria-labelledby="careers-form-title">
+      <div class="wrap">
+        <a class="text-link" href="/trabalheconosco">←︎ Trabalhe conosco</a>
+        <h1 id="careers-form-title">Cadastre seu currículo</h1>
+        <iframe class="careers-form-frame" src="https://curriculo-mail-bridge.lovable.app"
+          title="Formulário de candidatura da Nex Telecom"></iframe>
+        <p class="helper">Se precisar, <a class="text-link" href="https://curriculo-mail-bridge.lovable.app" target="_blank" rel="noopener">abra o formulário em uma nova aba ↗︎</a>.</p>
       </div>
     </section>`;
 }

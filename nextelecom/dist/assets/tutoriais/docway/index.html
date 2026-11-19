@@ -109,8 +109,8 @@
     <div class="footer">
       <div class="helper">Siga pelo aplicativo ou pelo portal do Docway. Este guia não solicita dados pessoais.</div>
       <div class="buttons">
-        <button type="button" class="btn btn-prev" id="prev">← Voltar</button>
-        <button type="button" class="btn btn-next" id="next">Próximo →</button>
+        <button type="button" class="btn btn-prev" id="prev">←︎ Voltar</button>
+        <button type="button" class="btn btn-next" id="next">Próximo →︎</button>
       </div>
     </div>
   </section>
@@ -158,7 +158,7 @@
    $('stepHint').textContent=item.hint;
    $('accessWrap').hidden=step!==0;
    $('prev').disabled=step===0;
-   $('next').textContent=step===7?'Recomeçar ↻':'Próximo →';
+   $('next').textContent=step===7?'Recomeçar ↻':'Próximo →︎';
    $('tabs').innerHTML=steps.map((_,i)=>'<button type="button" class="step-tab '+(i===step?'active':i<step?'done':'')+'" data-step="'+i+'" '+(i===step?'aria-current="step"':'')+' aria-label="Etapa '+(i+1)+': '+nameMap[i]+'" title="'+nameMap[i]+'">'+(i<step?'✓':i+1)+'</button>').join('');
    $('tabs').querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>goTo(Number(button.dataset.step))));
    renderPicture();
