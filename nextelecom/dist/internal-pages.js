@@ -32,7 +32,7 @@ const PAGE_ART = {
 
 function hero({ eyebrow, title, copy, cta = 'Encontre seu plano', url = '#planos' }) {
   const route = location.pathname.replace(/\/$/, '') || '/';
-  const art = PAGE_ART[route] || PAGE_ART['/internet'];
+  const art = PAGE_ART[route === '/faleconosco' ? '/contato' : route] || PAGE_ART['/internet'];
   const isBusiness = art.theme === 'business';
   const services = ['fiber', 'services'].includes(art.theme);
   const logos = services && typeof nexSvaLogos === 'function'
@@ -89,7 +89,7 @@ function promos() {
   return campaignPromos();
 }
 
-function nexStoreSection(isContact) {
+function nexStoreSection() {
   return `<section class="section nex-store-section reveal">
     <div class="wrap nex-store-layout">
       <figure class="nex-store-photo">
@@ -98,7 +98,7 @@ function nexStoreSection(isContact) {
       </figure>
       <div class="nex-store-copy">
         <span class="eyebrow">NEX, PERTO DE VOCÊ</span>
-        <h2>${isContact ? 'Atendimento de perto. Conexão de verdade.' : 'Uma conexão também se faz de pessoas.'}</h2>
+        <h2>Uma conexão também se faz de pessoas.</h2>
         <p>Nossa equipe recebe você e ajuda a encontrar a conexão que combina com a sua casa ou empresa.</p>
         <button class="button outline" data-business="Atendimento na loja São Cristóvão">Falar com a equipe <span aria-hidden="true">↗</span></button>
       </div>
@@ -111,8 +111,8 @@ function configureInternalPage() {
   document.body.classList.toggle('internal-page', path !== '/');
   document.body.dataset.section = path.slice(1) || 'home';
 
-  if (['/quem-somos', '/contato'].includes(path) && !document.querySelector('.nex-store-section')) {
-    document.querySelector('.page-masthead')?.insertAdjacentHTML('afterend', nexStoreSection(path === '/contato'));
+  if (path === '/quem-somos' && !document.querySelector('.nex-store-section')) {
+    document.querySelector('.page-masthead')?.insertAdjacentHTML('afterend', nexStoreSection());
   }
 
 
@@ -141,3 +141,69 @@ function configureInternalPage() {
 }
 
 document.addEventListener('nex:render', configureInternalPage);
+
+const NEX_STORES = [
+  ['Rua Professor Plínio Garcez de Sena, nº 51', 'https://www.google.com/maps/search/?api=1&query=-12.917472,-38.365028'],
+  ['Rua Doutor Maurício, nº 131–173, Lauro de Freitas', 'https://www.google.com/maps/search/?api=1&query=-12.879306,-38.353722'],
+  ['Quadra 1, Lote 19, Avenida Fortaleza, Lauro de Freitas', 'https://www.google.com/maps/search/?api=1&query=-12.893944,-38.342028'],
+  ['Rua Manoel Silvestre Leite, 228, Lauro de Freitas, BA', 'https://maps.app.goo.gl/WwXYG7Q3NKgwxz65A'],
+  ['Largo do Soledade, 18, Lapinha, Salvador, BA, 40325-090', 'https://www.google.com/maps/search/?api=1&query=-12.957167,-38.498611'],
+  ['Avenida Aliomar Baleeiro, 14703, São Cristóvão, Salvador, BA', 'https://www.google.com/maps/search/?api=1&query=Avenida+Aliomar+Baleeiro%2C+14703+-+S%C3%A3o+Crist%C3%B3v%C3%A3o%2C+Salvador+-+BA']
+];
+
+function contact() {
+  const whatsapp = 'https://wa.me/557132526676';
+  const external = (url, label, cls = 'text-link') =>
+    `<a class="${cls}" href="${url}" target="_blank" rel="noopener">${label} <span aria-hidden="true">↗</span></a>`;
+
+  const stores = NEX_STORES.map(([address, map], index) => {
+    const number = String(index + 1).padStart(2, '0');
+    const image = index === 5 ? 'nex-store-saocristovao.webp' : `loja-nex-${number}.webp`;
+    const message = encodeURIComponent(`Olá! Gostaria de informações sobre a loja ${number} da Nex Telecom.`);
+    return `<article class="contact-store">
+      <img src="/assets/${image}" loading="lazy" width="900" height="600" alt="Fachada da loja ${number} da Nex Telecom">
+      <div class="contact-store-copy">
+        <h3>Loja ${number}</h3>
+        <p>${address}</p>
+        <div class="contact-actions">
+          ${external(map, 'Como chegar', 'button blue')}
+          ${external(`${whatsapp}?text=${message}`, 'WhatsApp')}
+        </div>
+      </div>
+    </article>`;
+  }).join('');
+
+  return hero({
+    eyebrow: 'FALE COM A NEX',
+    title: 'Fale <em>conosco.</em>',
+    copy: 'Fale com nossa equipe, acesse a área do cliente ou encontre uma loja Nex.',
+    cta: 'Ver nossas lojas',
+    url: '#lojas'
+  }) + `
+    <section class="section" id="canais">
+      <div class="wrap">
+        ${sectionHead('ATENDIMENTO NEX', 'Como podemos ajudar?')}
+        <div class="cards-three">
+          <article><h3>Contratação e suporte</h3><p>Converse com a nossa equipe para contratar um plano ou pedir ajuda.</p>${external(whatsapp, 'Abrir WhatsApp', 'button')}</article>
+          <article><h3>Atendimento por telefone</h3><p>Ligue para a Nex pelo número <strong>(71) 3252-6676</strong>.</p><a class="button blue" href="tel:+557132526676">Ligar agora</a></article>
+          <article><h3>Minha Nex</h3><p>Acesse a Central do Assinante e consulte a segunda via da fatura.</p>${external('https://central.nextelecom.net.br/', 'Acessar Minha Nex', 'button blue')}</article>
+        </div>
+      </div>
+    </section>
+    <section class="section soft" id="lojas">
+      <div class="wrap">
+        ${sectionHead('ATENDIMENTO PRESENCIAL', 'Encontre uma loja Nex.', 'Escolha uma unidade para ver a rota ou confirmar o horário pelo WhatsApp.')}
+        <div class="contact-stores">${stores}</div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        ${sectionHead('LINKS RÁPIDOS', 'Nex ao seu alcance.')}
+        <div class="cards-three">
+          <article><h3>Baixe o app Minha Nex</h3><div class="contact-actions">${external('https://play.google.com/store/apps/details?id=com.hubsoft_client_app.nextelecom&hl=pt_BR', 'Google Play')}${external('https://apps.apple.com/br/app/minha-nex/id6670446541', 'App Store')}</div></article>
+          <article><h3>Teste a conexão</h3>${external('https://test.nextelecom.com.br/', 'Teste de velocidade')}</article>
+          <article><h3>Acompanhe a Nex</h3><div class="contact-actions">${external('https://nextelecom.com.br/trabalheconosco/', 'Trabalhe conosco')}${external('https://www.instagram.com/nextelecomoficial/', 'Instagram')}</div></article>
+        </div>
+      </div>
+    </section>` + faq(commonFaq);
+}

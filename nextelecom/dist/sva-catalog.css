@@ -6,6 +6,7 @@
 .sva-carousel .sva-service{scroll-snap-align:start;min-width:0}
 .sva-service-art{height:145px!important;display:grid;place-items:center;background:#f1f5fc!important}
 .sva-service-art .sva-service-logo{position:static!important;width:82px!important;height:82px!important;max-width:none!important;border-radius:17px;box-shadow:0 8px 22px #15326b0d}
+.sva-service-art .sva-service-logo[src$="/sva-prime.png"]{border:0;background:#3769f0}
 .sva-carousel .sva-service-content{padding:22px!important}
 .sva-carousel .sva-service-content h3{font-size:23px}
 .sva-service-actions{flex-wrap:wrap}

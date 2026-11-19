@@ -144,18 +144,11 @@
   margin-top: 28px;
 }
 
-.masthead-service-logos > div {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 9px;
-}
-
-.masthead-service-logos img {
+.masthead-service-logos .sva-logo {
   width: 44px;
   height: 44px;
-  object-fit: contain;
   border-radius: 11px;
+  background: transparent;
 }
 
 .masthead-caption {
@@ -232,13 +225,13 @@
   text-shadow: 0 1px 3px #511400b3;
 }
 
-.masthead-banner .button {
+.masthead-banner .masthead-copy .hero-actions .button {
   background: var(--nex-blue);
   color: var(--nex-white);
   text-shadow: none;
 }
 
-.masthead-banner .button:hover {
+.masthead-banner .masthead-copy .hero-actions .button:hover {
   background: #123c9f;
 }
 
@@ -749,7 +742,7 @@
   .masthead-visual { min-height: 340px; }
   .masthead-business .masthead-art { height: 380px; }
   .masthead-service-logos { margin-top: 18px; gap: 7px; }
-  .masthead-service-logos img { width: 37px; height: 37px; border-radius: 9px; }
+  .masthead-service-logos .sva-logo { width: 37px; height: 37px; border-radius: 9px; }
   .masthead-caption .wrap { min-height: 57px; font-size: 12px; gap: 10px; }
   .page-masthead .motion-pause { bottom: 71px; width: 34px; height: 34px; }
   .internal-page .section { padding-top: 60px; padding-bottom: 60px; }
@@ -780,7 +773,7 @@
   .masthead-copy .button { min-height: 48px; padding: 13px 16px; font-size: 12px; gap: 14px; }
   .masthead-copy .text-link { min-height: 44px; font-size: 12px; gap: 6px; }
   .masthead-service-logos { margin-top: 22px; }
-  .masthead-service-logos img { width: 38px; height: 38px; }
+  .masthead-service-logos .sva-logo { width: 38px; height: 38px; }
   .masthead-visual { min-height: 290px; height: 300px; margin-top: 3px; }
   .masthead-art { max-width: 350px; height: 310px; }
   .masthead-art-panel { inset: 14% 5% 7%; border-radius: 24px; }
@@ -928,4 +921,51 @@
   .nex-store-copy h2 { max-width: 480px; font-size: 33px; }
   .nex-store-copy p { font-size: 14px; margin: 20px 0 23px; }
   .nex-store-copy .button { font-size: 13px; }
+}
+
+.contact-stores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr));
+  gap: 24px;
+}
+
+.contact-store {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--nex-white);
+}
+
+.contact-store > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.contact-store-copy {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  flex: 1;
+  gap: 12px;
+  padding: 22px;
+}
+
+.contact-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.contact-store-copy p {
+  color: var(--muted);
+}
+
+#lojas, #canais {
+  scroll-margin-top: 1rem;
 }
