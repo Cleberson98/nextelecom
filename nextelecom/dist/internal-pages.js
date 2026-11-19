@@ -1,4 +1,27 @@
 /* Aberturas e seções internas da Nex. Textos e ações permanecem elementos HTML. */
+function myNexApp() {
+  return `
+    <section class="section my-nex-app" aria-labelledby="my-nex-title">
+      <div class="wrap">
+        <a class="breadcrumb" href="/">Início <span>/</span> Aplicativo Minha Nex</a>
+        <div class="my-nex-app-content">
+          <span class="eyebrow">MINHA NEX</span>
+          <h1 id="my-nex-title">Sua Nex, na palma da mão.</h1>
+          <p>Acesse suas faturas, acompanhe seus serviços e fale com a Nex pelo aplicativo Minha Nex.</p>
+          <h2>Baixe no seu celular</h2>
+          <div class="my-nex-store-links">
+            <a class="button blue" href="https://play.google.com/store/apps/details?id=com.hubsoft_client_app.nextelecom&hl=pt_BR" target="_blank" rel="noopener" aria-label="Baixar Minha Nex no Google Play">
+              <span><small>Para Android</small>Google Play</span><span aria-hidden="true">↗</span>
+            </a>
+            <a class="button blue" href="https://apps.apple.com/br/app/minha-nex/id6670446541" target="_blank" rel="noopener" aria-label="Baixar Minha Nex na App Store">
+              <span><small>Para iPhone</small>App Store</span><span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>`;
+}
+
 const PAGE_ART = {
   '/internet': {
     theme: 'fiber', banner: 'gamer', alt: 'Mascote da Nex jogando em uma arena gamer iluminada por neon.',
@@ -202,7 +225,7 @@ function contact() {
         <div class="cards-three">
           <article><h3>Baixe o app Minha Nex</h3><div class="contact-actions">${external('https://play.google.com/store/apps/details?id=com.hubsoft_client_app.nextelecom&hl=pt_BR', 'Google Play')}${external('https://apps.apple.com/br/app/minha-nex/id6670446541', 'App Store')}</div></article>
           <article><h3>Teste a conexão</h3>${external('https://test.nextelecom.com.br/', 'Teste de velocidade')}</article>
-          <article><h3>Acompanhe a Nex</h3><div class="contact-actions">${external('https://nextelecom.com.br/trabalheconosco/', 'Trabalhe conosco')}${external('https://www.instagram.com/nextelecomoficial/', 'Instagram')}</div></article>
+          <article><h3>Acompanhe a Nex</h3><div class="contact-actions"><a class="text-link" href="/trabalheconosco">Trabalhe conosco ↗</a>${external('https://www.instagram.com/nextelecomoficial/', 'Instagram')}</div></article>
         </div>
       </div>
     </section>` + faq(commonFaq);

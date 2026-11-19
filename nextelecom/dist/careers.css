@@ -1,0 +1,158 @@
+.careers-hero {
+  background: #eef3fb;
+  overflow: hidden;
+}
+
+.careers-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(32px, 6vw, 90px);
+  align-items: center;
+}
+
+.careers-intro {
+  padding: 36px 0 60px;
+}
+
+.careers-intro .breadcrumb {
+  display: flex;
+  width: fit-content;
+  color: #52627d;
+  margin-bottom: 38px;
+}
+
+.careers-intro .eyebrow {
+  color: #52627d;
+}
+
+.careers-intro h1 {
+  color: var(--ink);
+  font-size: clamp(42px, 5vw, 70px);
+}
+
+.careers-intro p {
+  margin-top: 20px;
+  color: #53627c;
+}
+
+.careers-intro .careers-lead {
+  color: var(--ink);
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.careers-intro .button {
+  margin-top: 28px;
+}
+
+.careers-photo {
+  display: block;
+  width: 100%;
+  height: clamp(450px, 46vw, 620px);
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: 24px 0 0 24px;
+}
+
+.careers-apply-grid,
+.careers-report {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(28px, 5vw, 70px);
+}
+
+.careers-apply p,
+.careers-values p {
+  color: #53627c;
+}
+
+.careers-apply .button {
+  margin-top: 24px;
+}
+
+.careers-values-heading p {
+  max-width: 470px;
+}
+
+.careers-values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.careers-values li {
+  padding: 28px;
+  background: white;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--nex-blue);
+  border-radius: 14px;
+}
+
+.careers-values h3 {
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+
+.careers-values p {
+  font-size: 14px;
+}
+
+.careers-transparency {
+  color: white;
+  background: #102953;
+}
+
+.careers-report h2 {
+  font-size: clamp(28px, 3vw, 40px);
+}
+
+.careers-report .eyebrow {
+  color: #c8d6f1;
+}
+
+.careers-report-period {
+  display: block;
+  margin-top: 20px;
+  color: #c8d6f1;
+}
+
+.careers-report p + p {
+  margin-top: 16px;
+}
+
+.careers-report .button {
+  margin-top: 26px;
+}
+
+@media (max-width: 800px) {
+  .careers-hero-grid,
+  .careers-apply-grid,
+  .careers-report {
+    grid-template-columns: 1fr;
+  }
+
+  .careers-hero-grid {
+    gap: 0;
+  }
+
+  .careers-photo {
+    height: 400px;
+    border-radius: 18px 18px 0 0;
+  }
+
+  .careers-values {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .careers-values {
+    grid-template-columns: 1fr;
+  }
+
+  .careers-photo {
+    height: 340px;
+  }
+}

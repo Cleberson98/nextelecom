@@ -969,3 +969,52 @@
 #lojas, #canais {
   scroll-margin-top: 1rem;
 }
+.my-nex-app {
+  background: #eef3fb;
+}
+
+.my-nex-app .breadcrumb {
+  color: #52627d;
+}
+
+.my-nex-app-content {
+  max-width: 760px;
+  margin: 48px auto;
+  text-align: center;
+}
+
+.my-nex-app h1 {
+  font-size: clamp(38px, 5vw, 64px);
+}
+
+.my-nex-app p {
+  max-width: 540px;
+  margin: 24px auto 36px;
+  color: #53627c;
+}
+
+.my-nex-app h2 {
+  font-size: 24px;
+  margin-bottom: 22px;
+}
+
+.my-nex-store-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.my-nex-store-links .button {
+  min-width: 220px;
+  justify-content: space-between;
+  text-align: left;
+  font-size: 21px;
+}
+
+.my-nex-store-links small {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 4px;
+}

@@ -33,17 +33,17 @@ function homeCampaigns() {
       title: 'Sua internet.<br><em>Seu próximo play.</em>',
       copy: 'Fibra para fazer acontecer. Seus apps favoritos para aproveitar cada momento.',
       services: ['SKY+', 'Ubook Plus', 'Kiddle Pass'], speed: '500', unit: 'MEGA', value: '99,90',
-      action: '<button class="button" data-add="fibra500">Montar meu plano <span>↗</span></button>',
+      action: '<button class="button blue" data-add="fibra500">Montar meu plano <span>↗</span></button>',
       extra: '<a class="text-link" href="#planos">Comparar os planos ↓</a>',
       banner: 'gamer', alt: 'Mascote da Nex jogando em uma arena gamer iluminada por neon.',
-      note: '16 benefícios incluídos a partir de 500 Mega. Consulte condições.'
+      note: 'Escolha 2 apps elegíveis sem custo no NEX Standard. Consulte condições.'
     },
     {
       id: 'mobile', eyebrow: 'INTERNET EM CASA + CHIP',
       title: 'Em casa.<br>Na rua.<br><em>Na sua vida.</em>',
       copy: 'A fibra que você já conhece. Mais 7 GB no celular para continuar conectado.',
       services: [], speed: '500', unit: 'MEGA + 7 GB', value: '118,90',
-      action: '<button class="button" data-add="movel500">Quero fibra + chip <span>↗</span></button>',
+      action: '<button class="button blue" data-add="movel500">Quero fibra + chip <span>↗</span></button>',
       extra: '<a class="text-link" href="/movel">Ver todas as opções ↗</a>',
       banner: 'chip', alt: 'Mascote da Nex mostrando um chip e um celular.',
       note: 'Preço do combo de fibra + uma linha móvel. Consulte cobertura e condições.'
@@ -53,7 +53,7 @@ function homeCampaigns() {
       title: 'Dê o play<br><em>do seu jeito.</em>',
       copy: 'Filmes, séries, música e muito mais para aproveitar com a sua conexão Nex.',
       services: ['Disney+', 'HBO Max', 'Deezer'],
-      action: '<a class="button" href="/svas">Explorar os apps <span>↗</span></a>',
+      action: '<a class="button blue" href="/svas">Explorar os apps <span>↗</span></a>',
       extra: '<button class="text-link" data-combo>Montar meu combo ↗</button>',
       banner: 'cinema-orange', alt: 'Mascote da Nex assistindo à TV na sala.',
       note: 'Consulte os apps disponíveis e as condições de cada plano.'
@@ -65,7 +65,7 @@ function homeCampaigns() {
       '<div class="wrap campaign-layout"><div class="campaign-message"><span class="eyebrow">' + slide.eyebrow + '</span>' +
       '<' + (index ? 'h2' : 'h1') + ' class="campaign-title">' + slide.title + '</' + (index ? 'h2' : 'h1') + '>' +
       '<p class="campaign-description">' + slide.copy + '</p>' +
-      (slide.services.length ? '<div class="campaign-apps">' + nexSvaLogos(slide.services, {size: 42}) + '<span>' + (index === 0 ? 'Já incluídos no plano' : 'Escolha para o seu combo') + '</span></div>' : '') +
+      (slide.services.length ? '<div class="campaign-apps">' + nexSvaLogos(slide.services, {size: 42}) + '<span>' + (index === 0 ? 'Escolha para o seu plano' : 'Escolha para o seu combo') + '</span></div>' : '') +
       (slide.speed ? '<div class="campaign-offer"><div class="offer-speed">' + slide.speed + '<span>' + slide.unit + '</span></div><div class="offer-price"><span>por mês</span><strong><small>R$</small> ' + slide.value + '</strong></div></div>' : '') +
       '<div class="hero-actions">' + slide.action + slide.extra + '</div><p class="campaign-condition">' + slide.note + '</p></div>' +
       '</div></article>'
@@ -86,7 +86,7 @@ function campaignBand() {
   return '<section class="home-combo-band"><div class="wrap home-combo-grid"><div class="home-combo-art reveal"><span class="combo-art-disc" aria-hidden="true"></span><img src="/assets/mascot-official.webp" alt="Mascote da Nex convidando você a escolher seu combo" loading="lazy" width="600" height="850"></div>' +
     '<div class="home-combo-copy reveal"><span class="eyebrow">ESPAÇO PARA O QUE VOCÊ GOSTA</span><h2>Seu mundo.<br><em>Seu combo.</em></h2><p>Escolha sua internet, combine seus serviços favoritos e deixe a conexão com a sua cara.</p>' +
     nexSvaLogos(['Disney+','HBO Max','Deezer','TV Plus','Ubook','Kindle Pass'],{size:46}) +
-    '<button class="button" data-combo>Começar meu combo <span>↗</span></button><span class="helper">Você escolhe. A Nex confirma as condições.</span></div></div></section>';
+    '<button class="button blue" data-combo>Começar meu combo <span>↗</span></button><span class="helper">Você escolhe. A Nex confirma as condições.</span></div></div></section>';
 }
 
 function homeServices() {

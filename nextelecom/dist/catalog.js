@@ -614,7 +614,26 @@ const SVA_SERVICES = [
 for (const service of SVA_SERVICES) {
  if (['disney','hbo','deezer','tvplus','ubook','kindle'].includes(service.id)) service.art='/assets/service-'+service.id+'.webp';
 }
-function serviceVariant(service, variantId, base) {
+function serviceVariant(service, variantId, base, state = {}) {
+  if (['fibra500', 'fibra700', 'fibra1000'].includes(base?.id)) {
+    if (base.included.includes(service.name)) {
+      return {id:'included',label:'Incluído no plano',price:0,tier:'included'};
+    }
+    const paidOptions = service.options.filter(option => !option.minSpeed);
+    const chosen = paidOptions.find(option => option.id === variantId);
+    if (chosen) return chosen;
+    if (base.freeAppChoices && service.included) {
+      const eligible = [...new Set([...(state.apps || []), service.id])].filter(id => {
+        const app = SVA_SERVICES.find(item => item.id === id);
+        const variant = (state.appVariants || {})[id];
+        return app?.included && !app.options.some(option => !option.minSpeed && option.id === variant);
+      });
+      if (eligible.indexOf(service.id) < base.freeAppChoices) {
+        return {id:'included',label:'Escolha sem custo',price:0,tier:'included'};
+      }
+    }
+    return paidOptions[0] || {id:'consult',label:'Sob consulta',price:null,tier:'consult'};
+  }
   if (base?.included?.includes(service.name) && (!variantId || variantId==='included' || service.id==='kindle')) return {...service.options.find(option=>option.id==='included'),id:'included',label:'Incluído no plano',price:0,tier:'included'};
   const included = service.options.find(option => option.minSpeed && base && base.speed >= option.minSpeed);
   if (included && (!variantId || variantId === 'included')) return included;
@@ -626,15 +645,19 @@ function calculate(state) {
   const base = [...CATALOG.internet,...CATALOG.mobile].find(plan => plan.id === state.base);
   const camera = CATALOG.cameras.find(plan => plan.id === state.camera);
   const svas = CATALOG.svas.filter(plan => (state.svas || []).includes(plan.id));
-  const apps = SVA_SERVICES.filter(service => (state.apps || []).includes(service.id)).map(service => ({
-    ...service, variant:serviceVariant(service,(state.appVariants || {})[service.id],base)
+  const apps = SVA_SERVICES.filter(service => (state.apps || []).includes(service.id) || base?.included?.includes(service.name)).map(service => ({
+    ...service, variant:serviceVariant(service,(state.appVariants || {})[service.id],base,state)
   }));
   const paidApps = apps.filter(service => service.variant && service.variant.price !== null);
   const unknownApps = apps.filter(service => !service.variant || service.variant.price === null);
   return {base,camera,svas,apps,unknownApps,monthly:(base?.price||0)+(camera?.price||0)+svas.reduce((sum,plan)=>sum+plan.price,0)+paidApps.reduce((sum,service)=>sum+service.variant.price,0),setup:camera?.setup||0,partial:camera?.price===null||svas.length>0||unknownApps.length>0,unknownFees:!!base};
 }
 for (const plan of CATALOG.internet) {
-  if (plan.speed >= 500) plan.included = ['TV Plus',...SVA_SERVICES.filter(service => service.included).map(service => service.name)];
+  if (plan.id === 'fibra500') {
+    plan.included = [];
+    plan.freeAppChoices = 2;
+  }
+  else if (plan.speed >= 700) plan.included = ['Globoplay'];
   else plan.included = ['TV Plus','Ubook Plus','Kiddle Pass'];
 }
 if (typeof module !== 'undefined') module.exports={CATALOG,calculate,SVA_SERVICES,serviceVariant};
